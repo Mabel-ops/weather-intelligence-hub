@@ -177,6 +177,10 @@ class WeatherIntelligencePlatform {
                             <option value="The Weather Channel">The Weather Channel</option>
                             <option value="Windy.com">Windy.com</option>
                             <option value="彩云天气">彩云天气</option>
+                            <option value="Weather & Radar">Weather & Radar</option>
+                            <option value="Weathernews">Weathernews</option>
+                            <option value="天气通">天气通</option>
+                            <option value="看天">看天</option>
                             <option value="墨迹天气">墨迹天气</option>
                         </select>
                     </div>
