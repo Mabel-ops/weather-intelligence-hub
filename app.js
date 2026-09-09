@@ -167,47 +167,87 @@ class WeatherIntelligencePlatform {
                 <p class="page-subtitle">全球主流天气APP动态追踪</p>
             </div>
 
-            <div class="filter-bar">
-                <div class="filter-row">
-                    <div class="filter-group">
-                        <label>公司筛选</label>
-                        <select id="tocCompanyFilter">
-                            <option value="">全部公司</option>
-                            <option value="AccuWeather">AccuWeather</option>
-                            <option value="The Weather Channel">The Weather Channel</option>
-                            <option value="Windy.com">Windy.com</option>
-                            <option value="彩云天气">彩云天气</option>
-                            <option value="Weather & Radar">Weather & Radar</option>
-                            <option value="Weathernews">Weathernews</option>
-                            <option value="天气通">天气通</option>
-                            <option value="看天">看天</option>
-                            <option value="墨迹天气">墨迹天气</option>
-                        </select>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="appUpdates">App版本更新</button>
+                    <button class="tab-btn" data-tab="companyNews">公司动态</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- App版本更新Tab -->
+                    <div id="appUpdatesTab" class="tab-pane active">
+                        <div class="filter-bar">
+                            <div class="filter-row">
+                                <div class="filter-group">
+                                    <label>公司筛选</label>
+                                    <select id="appCompanyFilter">
+                                        <option value="">全部公司</option>
+                                        <option value="AccuWeather">AccuWeather</option>
+                                        <option value="The Weather Channel">The Weather Channel</option>
+                                        <option value="Windy.com">Windy.com</option>
+                                        <option value="彩云天气">彩云天气</option>
+                                        <option value="Weather & Radar">Weather & Radar</option>
+                                        <option value="Weathernews">Weathernews</option>
+                                        <option value="天气通">天气通</option>
+                                        <option value="看天">看天</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label>重要性</label>
+                                    <select id="appRatingFilter">
+                                        <option value="">全部等级</option>
+                                        <option value="S">S级</option>
+                                        <option value="A">A级</option>
+                                        <option value="B">B级</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="appUpdatesList">${this.renderAppUpdatesList(MOCK_DATA.tocAppUpdates)}</div>
                     </div>
-                    <div class="filter-group">
-                        <label>动态类型</label>
-                        <select id="tocTypeFilter">
-                            <option value="">全部类型</option>
-                            <option value="AI">AI</option>
-                            <option value="产品">产品</option>
-                            <option value="商业化">商业化</option>
-                            <option value="合作">合作</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>重要性</label>
-                        <select id="tocRatingFilter">
-                            <option value="">全部等级</option>
-                            <option value="S">S级</option>
-                            <option value="A">A级</option>
-                            <option value="B">B级</option>
-                        </select>
+
+                    <!-- 公司动态Tab -->
+                    <div id="companyNewsTab" class="tab-pane">
+                        <div class="filter-bar">
+                            <div class="filter-row">
+                                <div class="filter-group">
+                                    <label>公司筛选</label>
+                                    <select id="newsCompanyFilter">
+                                        <option value="">全部公司</option>
+                                        <option value="AccuWeather">AccuWeather</option>
+                                        <option value="The Weather Channel">The Weather Channel</option>
+                                        <option value="Windy.com">Windy.com</option>
+                                        <option value="彩云天气">彩云天气</option>
+                                        <option value="Weather & Radar">Weather & Radar</option>
+                                        <option value="Weathernews">Weathernews</option>
+                                        <option value="天气通">天气通</option>
+                                        <option value="看天">看天</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label>动态类型</label>
+                                    <select id="newsTypeFilter">
+                                        <option value="">全部类型</option>
+                                        <option value="战略">战略</option>
+                                        <option value="融资">融资</option>
+                                        <option value="技术">技术</option>
+                                        <option value="合作">合作</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label>重要性</label>
+                                    <select id="newsRatingFilter">
+                                        <option value="">全部等级</option>
+                                        <option value="S">S级</option>
+                                        <option value="A">A级</option>
+                                        <option value="B">B级</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="companyNewsList">${this.renderCompanyNewsList(MOCK_DATA.tocCompanyNews)}</div>
                     </div>
                 </div>
-            </div>
-
-            <div id="tocIntelList">
-                ${this.renderIntelList(MOCK_DATA.tocIntelligence)}
             </div>
         `;
     }
@@ -767,14 +807,73 @@ class WeatherIntelligencePlatform {
     }
 
     attachToCEventListeners() {
-        ['tocCompanyFilter', 'tocTypeFilter', 'tocRatingFilter'].forEach(id => {
+        // Tab切换
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+
+                // 更新按钮状态
+                tabButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 切换Tab内容
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                if (targetTab === 'appUpdates') {
+                    document.getElementById('appUpdatesTab').classList.add('active');
+                } else if (targetTab === 'companyNews') {
+                    document.getElementById('companyNewsTab').classList.add('active');
+                }
+            });
+        });
+
+        // App版本更新筛选
+        ['appCompanyFilter', 'appRatingFilter'].forEach(id => {
             const element = document.getElementById(id);
             if (element) {
                 element.addEventListener('change', () => {
-                    this.filterToCIntelligence();
+                    this.filterAppUpdates();
                 });
             }
         });
+
+        // 公司动态筛选
+        ['newsCompanyFilter', 'newsTypeFilter', 'newsRatingFilter'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('change', () => {
+                    this.filterCompanyNews();
+                });
+            }
+        });
+    }
+
+    filterAppUpdates() {
+        const companyFilter = document.getElementById('appCompanyFilter').value;
+        const ratingFilter = document.getElementById('appRatingFilter').value;
+
+        let filtered = MOCK_DATA.tocAppUpdates.filter(update => {
+            const matchCompany = !companyFilter || update.company === companyFilter;
+            const matchRating = !ratingFilter || update.rating === ratingFilter;
+            return matchCompany && matchRating;
+        });
+
+        document.getElementById('appUpdatesList').innerHTML = this.renderAppUpdatesList(filtered);
+    }
+
+    filterCompanyNews() {
+        const companyFilter = document.getElementById('newsCompanyFilter').value;
+        const typeFilter = document.getElementById('newsTypeFilter').value;
+        const ratingFilter = document.getElementById('newsRatingFilter').value;
+
+        let filtered = MOCK_DATA.tocCompanyNews.filter(news => {
+            const matchCompany = !companyFilter || news.company === companyFilter;
+            const matchType = !typeFilter || news.type === typeFilter;
+            const matchRating = !ratingFilter || news.rating === ratingFilter;
+            return matchCompany && matchType && matchRating;
+        });
+
+        document.getElementById('companyNewsList').innerHTML = this.renderCompanyNewsList(filtered);
     }
 
     filterToCIntelligence() {
@@ -790,6 +889,69 @@ class WeatherIntelligencePlatform {
         });
 
         document.getElementById('tocIntelList').innerHTML = this.renderIntelList(filtered);
+    }
+
+    // 渲染App版本更新列表
+    renderAppUpdatesList(updates) {
+        return updates.map(update => `
+            <div class="intel-card">
+                <div class="intel-header">
+                    <div>
+                        <span class="badge badge-field">${update.company}</span>
+                        <span class="badge badge-rating-${update.rating.toLowerCase()}">${update.rating}级</span>
+                        <span style="margin-left: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">${update.version}</span>
+                    </div>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem;">${update.date}</span>
+                </div>
+                <div class="intel-body">
+                    <h3 class="intel-title">${update.company} ${update.version} 版本更新</h3>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">📋 更新内容：</div>
+                        <div style="white-space: pre-line; line-height: 1.8; color: var(--text-secondary);">${update.updateContent}</div>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">✨ 功能亮点：</div>
+                        <div style="line-height: 1.6; color: var(--text-secondary);">${update.highlights}</div>
+                    </div>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #f0f9ff; border-left: 3px solid #3b82f6; border-radius: 4px;">
+                        <div style="font-weight: 600; color: #1e40af; margin-bottom: 0.5rem;">💡 对墨迹天气的启示：</div>
+                        <div style="line-height: 1.6; color: #1e3a8a;">${update.insightForMoji}</div>
+                    </div>
+                    <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        数据来源: ${update.source}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // 渲染公司动态列表
+    renderCompanyNewsList(news) {
+        return news.map(item => `
+            <div class="intel-card">
+                <div class="intel-header">
+                    <div>
+                        <span class="badge badge-field">${item.company}</span>
+                        <span class="badge badge-type">${item.type}</span>
+                        <span class="badge badge-rating-${item.rating.toLowerCase()}">${item.rating}级</span>
+                    </div>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem;">${item.date}</span>
+                </div>
+                <div class="intel-body">
+                    <h3 class="intel-title">${item.title}</h3>
+                    <div style="margin-top: 1rem; line-height: 1.8; color: var(--text-secondary);">
+                        ${item.content}
+                    </div>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #f0f9ff; border-left: 3px solid #3b82f6; border-radius: 4px;">
+                        <div style="font-weight: 600; color: #1e40af; margin-bottom: 0.5rem;">💡 对墨迹天气的影响：</div>
+                        <div style="line-height: 1.6; color: #1e3a8a;">${item.impactOnMoji}</div>
+                    </div>
+                    <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        来源: ${item.source}
+                    </div>
+                </div>
+            </div>
+        `).join('');
     }
 
     updateTime() {
