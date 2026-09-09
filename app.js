@@ -78,9 +78,12 @@ class WeatherIntelligencePlatform {
                 break;
             case 'trends':
                 container.innerHTML = this.renderTrendsPage();
+                this.attachTrendsEventListeners();
                 break;
             case 'companies':
                 container.innerHTML = this.renderCompaniesPage();
+                // 使用setTimeout确保DOM渲染完成后再绑定事件
+                setTimeout(() => this.attachCompaniesEventListeners(), 0);
                 break;
             case 'ai':
                 container.innerHTML = this.renderAIPage();
@@ -88,12 +91,24 @@ class WeatherIntelligencePlatform {
                 break;
             case 'library':
                 container.innerHTML = this.renderLibraryPage();
+                this.attachLibraryEventListeners();
                 break;
             case 'reports':
                 container.innerHTML = this.renderReportsPage();
                 break;
             default:
                 container.innerHTML = this.renderHomePage();
+        }
+    }
+
+    navigateTo(page) {
+        this.renderPage(page);
+        // 更新导航菜单高亮
+        document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+        document.querySelectorAll('.sub-menu a').forEach(nav => nav.classList.remove('active'));
+        const targetNav = document.querySelector(`[data-page="${page}"]`);
+        if (targetNav) {
+            targetNav.classList.add('active');
         }
     }
 
@@ -336,7 +351,7 @@ class WeatherIntelligencePlatform {
                 <div class="filter-row">
                     <div class="filter-group">
                         <label>趋势分类</label>
-                        <select>
+                        <select id="trendCategoryFilter">
                             <option value="">全部趋势</option>
                             <option value="综合">综合</option>
                             <option value="ToC">ToC</option>
@@ -345,7 +360,7 @@ class WeatherIntelligencePlatform {
                     </div>
                     <div class="filter-group">
                         <label>趋势阶段</label>
-                        <select>
+                        <select id="trendStageFilter">
                             <option value="">全部阶段</option>
                             <option value="emerging">萌芽</option>
                             <option value="accelerating">加速</option>
@@ -356,7 +371,7 @@ class WeatherIntelligencePlatform {
                 </div>
             </div>
 
-            ${this.renderTrendsList(MOCK_DATA.trends)}
+            <div id="trendsList">${this.renderTrendsList(MOCK_DATA.trends)}</div>
         `;
     }
 
@@ -414,7 +429,7 @@ class WeatherIntelligencePlatform {
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem;">
                 ${MOCK_DATA.companies.map(company => `
-                    <div class="company-card">
+                    <div class="company-card" style="cursor: pointer; transition: transform 0.2s;" data-company-name="${company.name}">
                         <div class="company-header">
                             <div class="company-logo">${company.logo}</div>
                             <div class="company-info">
@@ -436,10 +451,109 @@ class WeatherIntelligencePlatform {
                                 ${company.recentStrategy}
                             </p>
                         </div>
+                        <div style="text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--primary-color); font-size: 0.9rem;">
+                            点击查看详细情报 →
+                        </div>
                     </div>
                 `).join('')}
             </div>
         `;
+    }
+
+    attachCompaniesEventListeners() {
+        const cards = document.querySelectorAll('.company-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const companyName = card.getAttribute('data-company-name');
+                this.showCompanyDetail(companyName);
+            });
+        });
+    }
+
+    showCompanyDetail(companyName) {
+        // 收集该公司的所有情报
+        const tocIntel = [...MOCK_DATA.tocAppUpdates, ...MOCK_DATA.tocCompanyNews].filter(item => item.company === companyName);
+        const tobIntel = [
+            ...MOCK_DATA.tobIntelligence.metro,
+            ...MOCK_DATA.tobIntelligence.aviation,
+            ...MOCK_DATA.tobIntelligence.energy
+        ].filter(item => item.company === companyName);
+
+        const allIntel = [...tocIntel, ...tobIntel].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        const company = MOCK_DATA.companies.find(c => c.name === companyName);
+
+        if (!company) return;
+
+        const detailHTML = `
+            <div class="page-header">
+                <button onclick="app.navigateTo('companies')" style="background: none; border: 1px solid var(--border-color); padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; margin-bottom: 1rem;">
+                    ← 返回企业列表
+                </button>
+                <h1 class="page-title">${company.name}</h1>
+                <p class="page-subtitle">${company.field.join(' / ')} · AI关注度 ${company.aiScore}/100</p>
+            </div>
+
+            <div class="ai-summary-card" style="margin-bottom: 2rem;">
+                <h3>📊 企业概览</h3>
+                <div style="margin-top: 1rem; line-height: 1.8;">
+                    <strong>核心产品：</strong>${company.products.join('、')}<br>
+                    <strong>主要客户：</strong>${company.customers.join('、')}<br>
+                    <strong>商业模式：</strong>${company.businessModel}<br>
+                    <strong>近期动态数：</strong>${company.recentActivity}条<br><br>
+                    <strong style="color: var(--primary-color);">近期战略方向：</strong><br>
+                    ${company.recentStrategy}
+                </div>
+            </div>
+
+            <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">相关情报动态（${allIntel.length}条）</h2>
+            ${allIntel.length > 0 ? allIntel.map(intel => {
+                if (intel.version) {
+                    // App更新
+                    return `
+                        <div class="intel-card">
+                            <div class="intel-header">
+                                <div>
+                                    <span class="badge badge-field">App版本更新</span>
+                                    <span class="badge badge-rating-${intel.rating.toLowerCase()}">${intel.rating}级</span>
+                                    <span style="margin-left: 0.5rem; color: var(--text-secondary);">${intel.version}</span>
+                                </div>
+                                <span style="color: var(--text-secondary);">${intel.date}</span>
+                            </div>
+                            <div class="intel-body">
+                                <h3 class="intel-title">${intel.company} ${intel.version} 版本更新</h3>
+                                <div style="margin-top: 1rem;">
+                                    <strong>更新内容：</strong>
+                                    <div style="white-space: pre-line; line-height: 1.8; color: var(--text-secondary);">${intel.updateContent}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } else if (intel.type) {
+                    // 公司动态或ToB情报
+                    return `
+                        <div class="intel-card">
+                            <div class="intel-header">
+                                <div>
+                                    <span class="badge badge-field">${intel.field || 'ToC'}</span>
+                                    <span class="badge badge-type">${intel.type}</span>
+                                    <span class="badge badge-rating-${intel.rating.toLowerCase()}">${intel.rating}级</span>
+                                </div>
+                                <span style="color: var(--text-secondary);">${intel.date}</span>
+                            </div>
+                            <div class="intel-body">
+                                <h3 class="intel-title">${intel.title}</h3>
+                                <div style="margin-top: 1rem; line-height: 1.8; color: var(--text-secondary);">
+                                    ${intel.content || intel.summary}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('') : '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">暂无相关情报</p>'}
+        `;
+
+        document.getElementById('pageContainer').innerHTML = detailHTML;
     }
 
     // AI分析页面
@@ -633,7 +747,7 @@ class WeatherIntelligencePlatform {
                 <div class="filter-row">
                     <div class="filter-group">
                         <label>业务领域</label>
-                        <select>
+                        <select id="libraryFieldFilter">
                             <option value="">全部领域</option>
                             <option value="ToC">ToC</option>
                             <option value="地铁">地铁</option>
@@ -643,7 +757,7 @@ class WeatherIntelligencePlatform {
                     </div>
                     <div class="filter-group">
                         <label>信息类型</label>
-                        <select>
+                        <select id="libraryTypeFilter">
                             <option value="">全部类型</option>
                             <option value="产品">产品</option>
                             <option value="AI">AI</option>
@@ -652,11 +766,13 @@ class WeatherIntelligencePlatform {
                             <option value="合作">合作</option>
                             <option value="政策">政策</option>
                             <option value="中标">中标</option>
+                            <option value="战略">战略</option>
+                            <option value="融资">融资</option>
                         </select>
                     </div>
                     <div class="filter-group">
                         <label>重要性</label>
-                        <select>
+                        <select id="libraryRatingFilter">
                             <option value="">全部等级</option>
                             <option value="S">S级</option>
                             <option value="A">A级</option>
@@ -665,7 +781,7 @@ class WeatherIntelligencePlatform {
                     </div>
                     <div class="filter-group">
                         <label>时间范围</label>
-                        <select>
+                        <select id="libraryTimeFilter">
                             <option value="">全部时间</option>
                             <option value="7">近7天</option>
                             <option value="30">近30天</option>
@@ -675,6 +791,14 @@ class WeatherIntelligencePlatform {
                 </div>
             </div>
 
+            <div id="libraryTableContainer">
+                ${this.renderLibraryTable(allIntel)}
+            </div>
+        `;
+    }
+
+    renderLibraryTable(intel) {
+        return `
             <div class="intel-table">
                 <table>
                     <thead>
@@ -688,14 +812,14 @@ class WeatherIntelligencePlatform {
                         </tr>
                     </thead>
                     <tbody>
-                        ${allIntel.map(intel => `
+                        ${intel.map(item => `
                             <tr>
-                                <td>${intel.date}</td>
-                                <td>${intel.company}</td>
-                                <td><span class="badge badge-field">${intel.field}</span></td>
-                                <td>${intel.title}</td>
-                                <td><span class="badge badge-type">${intel.type}</span></td>
-                                <td><span class="badge badge-rating-${intel.rating.toLowerCase()}">${intel.rating}级</span></td>
+                                <td>${item.date}</td>
+                                <td>${item.company}</td>
+                                <td><span class="badge badge-field">${item.field}</span></td>
+                                <td>${item.title || item.company + ' ' + (item.version || '动态')}</td>
+                                <td><span class="badge badge-type">${item.type}</span></td>
+                                <td><span class="badge badge-rating-${item.rating.toLowerCase()}">${item.rating}级</span></td>
                             </tr>
                         `).join('')}
                     </tbody>
@@ -874,6 +998,78 @@ class WeatherIntelligencePlatform {
         });
 
         document.getElementById('companyNewsList').innerHTML = this.renderCompanyNewsList(filtered);
+    }
+
+    attachTrendsEventListeners() {
+        ['trendCategoryFilter', 'trendStageFilter'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('change', () => {
+                    this.filterTrends();
+                });
+            }
+        });
+    }
+
+    filterTrends() {
+        const categoryFilter = document.getElementById('trendCategoryFilter').value;
+        const stageFilter = document.getElementById('trendStageFilter').value;
+
+        let filtered = MOCK_DATA.trends.filter(trend => {
+            const matchCategory = !categoryFilter || trend.category === categoryFilter;
+            const matchStage = !stageFilter || trend.stage === stageFilter;
+            return matchCategory && matchStage;
+        });
+
+        document.getElementById('trendsList').innerHTML = this.renderTrendsList(filtered);
+    }
+
+    attachLibraryEventListeners() {
+        ['libraryFieldFilter', 'libraryTypeFilter', 'libraryRatingFilter', 'libraryTimeFilter'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('change', () => {
+                    this.filterLibrary();
+                });
+            }
+        });
+    }
+
+    filterLibrary() {
+        const fieldFilter = document.getElementById('libraryFieldFilter').value;
+        const typeFilter = document.getElementById('libraryTypeFilter').value;
+        const ratingFilter = document.getElementById('libraryRatingFilter').value;
+        const timeFilter = document.getElementById('libraryTimeFilter').value;
+
+        let allIntel = [
+            ...MOCK_DATA.tocAppUpdates,
+            ...MOCK_DATA.tocCompanyNews,
+            ...MOCK_DATA.tocIntelligence,
+            ...MOCK_DATA.tobIntelligence.metro,
+            ...MOCK_DATA.tobIntelligence.aviation,
+            ...MOCK_DATA.tobIntelligence.energy
+        ];
+
+        let filtered = allIntel.filter(intel => {
+            const matchField = !fieldFilter || intel.field === fieldFilter;
+            const matchType = !typeFilter || intel.type === typeFilter;
+            const matchRating = !ratingFilter || intel.rating === ratingFilter;
+
+            let matchTime = true;
+            if (timeFilter) {
+                const days = parseInt(timeFilter);
+                const intelDate = new Date(intel.date);
+                const now = new Date();
+                const diffDays = Math.floor((now - intelDate) / (1000 * 60 * 60 * 24));
+                matchTime = diffDays <= days;
+            }
+
+            return matchField && matchType && matchRating && matchTime;
+        });
+
+        filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        document.getElementById('libraryTableContainer').innerHTML = this.renderLibraryTable(filtered);
     }
 
     filterToCIntelligence() {

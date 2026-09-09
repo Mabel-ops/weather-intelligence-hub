@@ -467,6 +467,7 @@ const MOCK_DATA = {
         {
             id: 1,
             name: "生成式AI进入天气服务核心链路",
+            category: "ToC",
             stage: "accelerating",
             strength: 4,
             firstSeen: "2026-07-15",
@@ -480,6 +481,7 @@ const MOCK_DATA = {
         {
             id: 2,
             name: "ToB气象服务向定制化、高精度方向演进",
+            category: "ToB",
             stage: "accelerating",
             strength: 4,
             firstSeen: "2026-06-20",
@@ -493,6 +495,7 @@ const MOCK_DATA = {
         {
             id: 3,
             name: "空气质量可视化成为天气APP新战场",
+            category: "ToC",
             stage: "emerging",
             strength: 3,
             firstSeen: "2026-08-10",
@@ -590,6 +593,54 @@ const MOCK_DATA = {
             recentActivity: 5,
             aiScore: 78,
             recentStrategy: "看天专注农业气象垂直场景，通过深度理解农业用户需求建立差异化定位。乡镇级预报和农事建议是其核心优势，显示垂直化策略的潜力。"
+        },
+        {
+            id: 8,
+            name: "The Weather Channel",
+            logo: "TWC",
+            field: ["ToC"],
+            products: ["The Weather Channel App", "Watson AI天气", "Storm Radar"],
+            customers: ["全球C端用户", "企业客户"],
+            businessModel: "To C订阅会员 + 广告 + To B数据服务",
+            recentActivity: 14,
+            aiScore: 93,
+            recentStrategy: "The Weather Channel近期战略重点是深化AI能力，与OpenAI合作开发定制AI模型，将生成式AI整合到天气查询全流程。通过AI对话提升用户体验，探索天气信息交互的新范式。"
+        },
+        {
+            id: 9,
+            name: "Windy.com",
+            logo: "Windy",
+            field: ["ToC"],
+            products: ["Windy App", "气象可视化", "飞行天气"],
+            customers: ["专业用户", "户外爱好者", "飞行员"],
+            businessModel: "To C订阅会员 + 企业授权",
+            recentActivity: 9,
+            aiScore: 82,
+            recentStrategy: "Windy.com专注气象数据可视化，通过强大的地图和动画展示建立技术壁垒。近期开源可视化框架WinViz，通过开源社区建立技术影响力，同时强化3D空气质量展示等专业功能。"
+        },
+        {
+            id: 10,
+            name: "彩云天气",
+            logo: "彩云",
+            field: ["ToC"],
+            products: ["彩云天气App", "分钟级降水预报", "AI播报员"],
+            customers: ["国内C端用户"],
+            businessModel: "To C会员订阅 + 广告 + To B API服务",
+            recentActivity: 11,
+            aiScore: 87,
+            recentStrategy: "彩云天气近期重点在AI内容生成和鸿蒙生态布局。推出AI虚拟播报员功能，与华为合作开发鸿蒙原生应用。继续强化分钟级降水预报的核心优势，探索AI在天气服务中的创新应用。"
+        },
+        {
+            id: 11,
+            name: "WNI",
+            logo: "WNI",
+            field: ["ToB", "航空"],
+            products: ["航空气象服务", "航路优化", "风险评估"],
+            customers: ["航空公司", "机场", "物流企业"],
+            businessModel: "To B专业服务 + 长期合同",
+            recentActivity: 10,
+            aiScore: 89,
+            recentStrategy: "WNI（Weathernews旗下）在航空气象领域深耕多年，近期与中国国航达成战略合作，为国际航线提供全球气象服务。通过高质量专业服务和全球数据能力建立竞争壁垒。"
         }
     ],
 
