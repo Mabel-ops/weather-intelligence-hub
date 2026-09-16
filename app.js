@@ -1160,7 +1160,7 @@ class WeatherIntelligencePlatform {
         
         // 转换为 YYYY-MM-DD HH:MM 格式
         const dateObj = new Date(latestDate + 'T09:00:00');
-        const timeStr = `${dateObj.getFullYear()}-${String(dateObj.getMonth()+1).padStart(2,'0')}-${String(dateObj.getDate()).padStart(2,'0')} ${String(dateObj.getHours()).padStart(2,'0'):${String(dateObj.getMinutes()).padStart(2,'0')}}`;
+        const timeStr = `${dateObj.getFullYear()}-${String(dateObj.getMonth()+1).padStart(2,'0')}-${String(dateObj.getDate()).padStart(2,'0')} ${String(dateObj.getHours()).padStart(2,'0')}:${String(dateObj.getMinutes()).padStart(2,'0')}`;
         document.getElementById('lastUpdate').textContent = timeStr;
     }
 }
