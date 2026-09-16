@@ -1151,11 +1151,17 @@ class WeatherIntelligencePlatform {
     }
 
     updateTime() {
-        setInterval(() => {
-            const now = new Date();
-            const timeStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-            document.getElementById('lastUpdate').textContent = timeStr;
-        }, 60000);
+        // 获取数据中最新的日期
+        let latestDate = '2026-09-07';
+        
+        if (MOCK_DATA.tocIntelligence && MOCK_DATA.tocIntelligence.length > 0) {
+            latestDate = MOCK_DATA.tocIntelligence[0].date;
+        }
+        
+        // 转换为 YYYY-MM-DD HH:MM 格式
+        const dateObj = new Date(latestDate + 'T09:00:00');
+        const timeStr = `${dateObj.getFullYear()}-${String(dateObj.getMonth()+1).padStart(2,'0')}-${String(dateObj.getDate()).padStart(2,'0')} ${String(dateObj.getHours()).padStart(2,'0'):${String(dateObj.getMinutes()).padStart(2,'0')}}`;
+        document.getElementById('lastUpdate').textContent = timeStr;
     }
 }
 
