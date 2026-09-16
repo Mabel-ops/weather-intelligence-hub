@@ -2,13 +2,41 @@
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 2,
-        "keyIntel": 8,
+        "weeklyIntel": 4,
+        "keyIntel": 10,
         "companies": 19,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weathernews等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weather & Radar等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1789519786291,
+            "title": "Weather & Radar上线智能分析系统",
+            "company": "Weather & Radar",
+            "field": "ToC",
+            "date": "2026-09-16",
+            "type": "AI",
+            "rating": "S",
+            "summary": "Weather & Radar宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weather&radar.com/news",
+            "aiAnalysis": "Weather & Radar此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
+        {
+            "id": 1789519786292,
+            "title": "Weather & Radar优化算法",
+            "company": "Weather & Radar",
+            "field": "ToC",
+            "date": "2026-09-16",
+            "type": "技术",
+            "rating": "A",
+            "summary": "Weather & Radar宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weather&radar.com/news",
+            "aiAnalysis": "Weather & Radar此举体现了在技术创新方面的持续投入",
+            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
         {
             "id": 1789463033353,
             "title": "Weathernews拓展新市场",
