@@ -69,15 +69,12 @@ class WeatherIntelligencePlatform {
                 break;
             case 'tob-metro':
                 container.innerHTML = this.renderToBIndustryPage('地铁', MOCK_DATA.tobIntelligence.metro);
-                this.attachToBEventListeners('地铁');
                 break;
             case 'tob-aviation':
                 container.innerHTML = this.renderToBIndustryPage('航空', MOCK_DATA.tobIntelligence.aviation);
-                this.attachToBEventListeners('航空');
                 break;
             case 'tob-energy':
                 container.innerHTML = this.renderToBIndustryPage('能源', MOCK_DATA.tobIntelligence.energy);
-                this.attachToBEventListeners('能源');
                 break;
             case 'trends':
                 container.innerHTML = this.renderTrendsPage();
@@ -87,10 +84,6 @@ class WeatherIntelligencePlatform {
                 container.innerHTML = this.renderCompaniesPage();
                 // 使用setTimeout确保DOM渲染完成后再绑定事件
                 setTimeout(() => this.attachCompaniesEventListeners(), 0);
-                break;
-            case 'company-monitor':
-                container.innerHTML = this.renderCompanyMonitorPage();
-                setTimeout(() => this.attachCompanyMonitorListeners(), 0);
                 break;
             case 'ai':
                 container.innerHTML = this.renderAIPage();
@@ -257,29 +250,12 @@ class WeatherIntelligencePlatform {
                                     </select>
                                 </div>
                                 <div class="filter-group">
-                                    <label>时间筛选</label>
-                                    <select id="newsTimeFilter">
-                                        <option value="">全部时间</option>
-                                        <option value="7">近一周</option>
-                                        <option value="30">近一个月</option>
-                                        <option value="90">近三个月</option>
-                                    </select>
-                                </div>
-                                <div class="filter-group">
                                     <label>重要性</label>
                                     <select id="newsRatingFilter">
                                         <option value="">全部等级</option>
                                         <option value="S">S级</option>
                                         <option value="A">A级</option>
                                         <option value="B">B级</option>
-                                    </select>
-                                </div>
-                                <div class="filter-group">
-                                    <label>排序</label>
-                                    <select id="newsSortFilter">
-                                        <option value="date-desc">时间从近到远</option>
-                                        <option value="date-asc">时间从远到近</option>
-                                        <option value="rating-desc">重要性从高到低</option>
                                     </select>
                                 </div>
                             </div>
@@ -347,40 +323,9 @@ class WeatherIntelligencePlatform {
                 <p>${this.getIndustryAIJudgment(industry)}</p>
             </div>
 
-            <div class="filter-bar">
-                <div class="filter-row">
-                    <div class="filter-group">
-                        <label>时间筛选</label>
-                        <select id="tob${industry}TimeFilter">
-                            <option value="">全部时间</option>
-                            <option value="7">近一周</option>
-                            <option value="30">近一个月</option>
-                            <option value="90">近三个月</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>类型筛选</label>
-                        <select id="tob${industry}TypeFilter">
-                            <option value="">全部类型</option>
-                            <option value="招标公告">招标公告</option>
-                            <option value="中标公告">中标公告</option>
-                            <option value="采购公告">采购公告</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>排序</label>
-                        <select id="tob${industry}SortFilter">
-                            <option value="date-desc">时间从近到远</option>
-                            <option value="date-asc">时间从远到近</option>
-                            <option value="rating-desc">重要性从高到低</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
             <section style="margin-bottom: 3rem;">
                 <h2 class="section-title">最新动态</h2>
-                <div id="tob${industry}List">${this.renderIntelList(data)}</div>
+                ${this.renderIntelList(data)}
             </section>
         `;
     }
@@ -947,44 +892,19 @@ class WeatherIntelligencePlatform {
     }
 
     renderToBPreview(industry, data) {
-        // 如果没有数据，显示空状态
-        if (!data || data.length === 0) {
-            return `
-                <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: var(--shadow);">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); color: var(--text-primary);">
-                        📍 ${industry}气象
-                    </h3>
-                    <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📭</div>
-                        <div>暂无${industry}行业招标信息</div>
-                        <div style="font-size: 0.85rem; margin-top: 0.5rem;">系统将持续监测最新动态</div>
-                    </div>
-                </div>
-            `;
-        }
-
         return `
             <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: var(--shadow);">
-                <h3 style="font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); color: var(--text-primary);">
-                    📍 ${industry}气象
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color);">
+                    ${industry}气象
                 </h3>
                 ${data.map(intel => `
-                    <div style="margin-bottom: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: 8px; border-left: 3px solid var(--primary-color);">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
-                            <div style="font-weight: 600; font-size: 1rem; color: var(--text-primary); flex: 1; line-height: 1.5;">
-                                ${intel.title}
-                            </div>
-                            <span class="badge badge-rating-${intel.rating ? intel.rating.toLowerCase() : 'b'}" style="margin-left: 1rem;">
-                                ${intel.rating || 'B'}级
-                            </span>
+                    <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <div style="font-weight: 600; flex: 1;">${intel.title}</div>
+                            <span class="badge badge-rating-${intel.rating.toLowerCase()}">${intel.rating}级</span>
                         </div>
-                        <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.5rem;">
-                            ${intel.summary ? intel.summary.substring(0, 120) : (intel.content ? intel.content.substring(0, 120) : '暂无描述')}...
-                        </div>
-                        <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary);">
-                            <span>📅 ${intel.date || '日期未知'}</span>
-                            ${intel.type ? `<span>📋 ${intel.type}</span>` : ''}
-                            ${intel.amount ? `<span>💰 ${intel.amount}</span>` : ''}
+                        <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                            ${intel.summary.substring(0, 100)}...
                         </div>
                     </div>
                 `).join('')}
@@ -1042,7 +962,7 @@ class WeatherIntelligencePlatform {
         });
 
         // 公司动态筛选
-        ['newsCompanyFilter', 'newsTypeFilter', 'newsRatingFilter', 'newsTimeFilter', 'newsSortFilter'].forEach(id => {
+        ['newsCompanyFilter', 'newsTypeFilter', 'newsRatingFilter'].forEach(id => {
             const element = document.getElementById(id);
             if (element) {
                 element.addEventListener('change', () => {
@@ -1069,41 +989,13 @@ class WeatherIntelligencePlatform {
         const companyFilter = document.getElementById('newsCompanyFilter').value;
         const typeFilter = document.getElementById('newsTypeFilter').value;
         const ratingFilter = document.getElementById('newsRatingFilter').value;
-        const timeFilter = document.getElementById('newsTimeFilter').value;
-        const sortFilter = document.getElementById('newsSortFilter').value;
-
-        // 计算时间过滤的截止日期
-        let cutoffDate = null;
-        if (timeFilter) {
-            const now = new Date();
-            const days = parseInt(timeFilter);
-            cutoffDate = new Date(now.getTime() - days * 24 * 60 * 60 * 1000);
-        }
 
         let filtered = MOCK_DATA.tocCompanyNews.filter(news => {
             const matchCompany = !companyFilter || news.company === companyFilter;
             const matchType = !typeFilter || news.type === typeFilter;
             const matchRating = !ratingFilter || news.rating === ratingFilter;
-
-            // 时间筛选
-            let matchTime = true;
-            if (cutoffDate && news.date) {
-                const newsDate = new Date(news.date);
-                matchTime = newsDate >= cutoffDate;
-            }
-
-            return matchCompany && matchType && matchRating && matchTime;
+            return matchCompany && matchType && matchRating;
         });
-
-        // 排序
-        if (sortFilter === 'date-desc') {
-            filtered.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-        } else if (sortFilter === 'date-asc') {
-            filtered.sort((a, b) => (a.date || '').localeCompare(b.date || ''));
-        } else if (sortFilter === 'rating-desc') {
-            const ratingOrder = { 'S': 4, 'A': 3, 'B': 2, 'C': 1 };
-            filtered.sort((a, b) => (ratingOrder[b.rating] || 0) - (ratingOrder[a.rating] || 0));
-        }
 
         document.getElementById('companyNewsList').innerHTML = this.renderCompanyNewsList(filtered);
     }
@@ -1178,70 +1070,6 @@ class WeatherIntelligencePlatform {
         filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
 
         document.getElementById('libraryTableContainer').innerHTML = this.renderLibraryTable(filtered);
-    }
-
-    // ToB 行业筛选
-    attachToBEventListeners(industry) {
-        ['Time', 'Type', 'Sort'].forEach(filterType => {
-            const id = `tob${industry}${filterType}Filter`;
-            const element = document.getElementById(id);
-            if (element) {
-                element.addEventListener('change', () => {
-                    this.filterToBIndustry(industry);
-                });
-            }
-        });
-    }
-
-    filterToBIndustry(industry) {
-        const timeFilter = document.getElementById(`tob${industry}TimeFilter`)?.value;
-        const typeFilter = document.getElementById(`tob${industry}TypeFilter`)?.value;
-        const sortFilter = document.getElementById(`tob${industry}SortFilter`)?.value;
-
-        // 获取对应行业的数据
-        let data;
-        if (industry === '地铁') {
-            data = [...MOCK_DATA.tobIntelligence.metro];
-        } else if (industry === '航空') {
-            data = [...MOCK_DATA.tobIntelligence.aviation];
-        } else if (industry === '能源') {
-            data = [...MOCK_DATA.tobIntelligence.energy];
-        } else {
-            return;
-        }
-
-        // 时间筛选
-        if (timeFilter) {
-            const days = parseInt(timeFilter);
-            const cutoffDate = new Date();
-            cutoffDate.setDate(cutoffDate.getDate() - days);
-
-            data = data.filter(item => {
-                const itemDate = new Date(item.date);
-                return itemDate >= cutoffDate;
-            });
-        }
-
-        // 类型筛选
-        if (typeFilter) {
-            data = data.filter(item => item.type === typeFilter);
-        }
-
-        // 排序
-        if (sortFilter === 'date-desc') {
-            data.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-        } else if (sortFilter === 'date-asc') {
-            data.sort((a, b) => (a.date || '').localeCompare(b.date || ''));
-        } else if (sortFilter === 'rating-desc') {
-            const ratingOrder = { 'S': 4, 'A': 3, 'B': 2, 'C': 1 };
-            data.sort((a, b) => (ratingOrder[b.rating] || 0) - (ratingOrder[a.rating] || 0));
-        }
-
-        // 更新列表
-        const listElement = document.getElementById(`tob${industry}List`);
-        if (listElement) {
-            listElement.innerHTML = this.renderIntelList(data);
-        }
     }
 
     filterToCIntelligence() {
@@ -1322,302 +1150,17 @@ class WeatherIntelligencePlatform {
         `).join('');
     }
 
-    // 企业监测页面
-    renderCompanyMonitorPage() {
-        const companies = MOCK_DATA.companyMonitor || [];
-
-        return `
-            <div class="page-header">
-                <h1 class="page-title">🏢 企业监测</h1>
-                <p class="page-subtitle">追踪重点气象企业的工商信息、变更记录和融资动态</p>
-            </div>
-
-            <div class="company-monitor-grid">
-                ${companies.map(company => this.renderCompanyMonitorCard(company)).join('')}
-            </div>
-
-            <!-- 企业详情模态框 -->
-            <div class="modal-overlay" id="companyModal" style="display: none;">
-                <div class="modal-content-large">
-                    <div class="modal-header">
-                        <h2 id="modalCompanyName"></h2>
-                        <button class="modal-close" onclick="app.closeCompanyModal()">&times;</button>
-                    </div>
-                    <div class="modal-body" id="modalCompanyBody"></div>
-                </div>
-            </div>
-        `;
-    }
-
-    renderCompanyMonitorCard(company) {
-        const countryBadge = company.country === '中国' ? 'badge-china' :
-                            company.country === '美国' ? 'badge-usa' : 'badge-europe';
-
-        const hasRecentChange = company.changes && company.changes.length > 0;
-        const recentChange = hasRecentChange ? company.changes[0] : null;
-
-        return `
-            <div class="company-monitor-card" data-company-id="${company.id}">
-                <div class="company-card-header">
-                    <div class="company-logo">${company.logo}</div>
-                    <div class="company-info">
-                        <h3>${company.name}</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">${company.nameEn}</p>
-                    </div>
-                </div>
-                <div class="company-details">
-                    <div class="detail-row">
-                        <span style="color: var(--text-secondary);">国家/地区</span>
-                        <span style="font-weight: 500;">${company.country}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span style="color: var(--text-secondary);">法人/CEO</span>
-                        <span style="font-weight: 500;">${company.basicInfo.legalPerson}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span style="color: var(--text-secondary);">成立时间</span>
-                        <span style="font-weight: 500;">${company.basicInfo.foundDate}</span>
-                    </div>
-                    ${company.basicInfo.registeredCapital ? `
-                    <div class="detail-row">
-                        <span style="color: var(--text-secondary);">注册资本</span>
-                        <span style="font-weight: 500;">${company.basicInfo.registeredCapital}</span>
-                    </div>
-                    ` : ''}
-                    ${hasRecentChange ? `
-                    <div class="detail-row" style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-color);">
-                        <span style="color: var(--text-secondary);">最新变更</span>
-                        <span style="color: #e74c3c; font-weight: 600;">${recentChange.date}</span>
-                    </div>
-                    <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
-                        ${recentChange.type}: ${recentChange.content || recentChange.remark || ''}
-                    </div>
-                    ` : ''}
-                </div>
-                <span class="badge ${countryBadge}" style="margin-top: 12px; display: inline-block;">${company.country}</span>
-            </div>
-        `;
-    }
-
-    attachCompanyMonitorListeners() {
-        document.querySelectorAll('.company-monitor-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                const companyId = parseInt(e.currentTarget.dataset.companyId);
-                this.showCompanyDetails(companyId);
-            });
-        });
-    }
-
-    showCompanyDetails(companyId) {
-        const company = MOCK_DATA.companyMonitor.find(c => c.id === companyId);
-        if (!company) return;
-
-        document.getElementById('modalCompanyName').textContent = company.name;
-        document.getElementById('modalCompanyBody').innerHTML = this.renderCompanyDetailsContent(company);
-        document.getElementById('companyModal').style.display = 'flex';
-
-        // 绑定tab切换
-        this.attachCompanyDetailsTabs();
-    }
-
-    renderCompanyDetailsContent(company) {
-        return `
-            <div class="tabs-container">
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="basic">基本信息</button>
-                    <button class="tab-btn" data-tab="changes">变更记录</button>
-                    <button class="tab-btn" data-tab="funding">融资历史</button>
-                    <button class="tab-btn" data-tab="shareholders">股东信息</button>
-                </div>
-
-                <div class="tab-content active" data-tab-content="basic">
-                    ${this.renderCompanyBasicInfo(company)}
-                </div>
-
-                <div class="tab-content" data-tab-content="changes">
-                    ${this.renderCompanyChanges(company)}
-                </div>
-
-                <div class="tab-content" data-tab-content="funding">
-                    ${this.renderCompanyFunding(company)}
-                </div>
-
-                <div class="tab-content" data-tab-content="shareholders">
-                    ${this.renderCompanyShareholders(company)}
-                </div>
-            </div>
-        `;
-    }
-
-    renderCompanyBasicInfo(company) {
-        const info = company.basicInfo;
-        return `
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">中文名称</span>
-                    <span style="font-weight: 500;">${company.name}</span>
-                </div>
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">英文名称</span>
-                    <span style="font-weight: 500;">${company.nameEn}</span>
-                </div>
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">法人/CEO</span>
-                    <span style="font-weight: 500;">${info.legalPerson}</span>
-                </div>
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">成立日期</span>
-                    <span style="font-weight: 500;">${info.foundDate}</span>
-                </div>
-                ${info.registeredCapital ? `
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">注册资本</span>
-                    <span style="font-weight: 500;">${info.registeredCapital}</span>
-                </div>
-                ` : ''}
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">状态</span>
-                    <span style="font-weight: 500;">${info.status}</span>
-                </div>
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">所在地</span>
-                    <span style="font-weight: 500;">${info.location}</span>
-                </div>
-                ${info.unifiedCode ? `
-                <div class="detail-row">
-                    <span style="color: var(--text-secondary);">统一社会信用代码</span>
-                    <span style="font-weight: 500; font-size: 0.85rem;">${info.unifiedCode}</span>
-                </div>
-                ` : ''}
-            </div>
-            ${info.businessScope ? `
-            <div style="margin-top: 24px;">
-                <div style="color: var(--text-secondary); margin-bottom: 8px; font-weight: 600;">经营范围</div>
-                <div style="padding: 12px; background: var(--bg-light); border-radius: 6px; line-height: 1.6;">
-                    ${info.businessScope}
-                </div>
-            </div>
-            ` : ''}
-            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-secondary);">
-                数据来源：${info.dataSource}
-            </div>
-        `;
-    }
-
-    renderCompanyChanges(company) {
-        if (!company.changes || company.changes.length === 0) {
-            return '<div style="text-align: center; padding: 40px; color: var(--text-secondary);">暂无变更记录</div>';
-        }
-
-        return `
-            <div class="timeline">
-                ${company.changes.map(change => `
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px;">${change.date}</div>
-                            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">${change.type}</div>
-                            ${change.before && change.after ? `
-                                <div style="font-size: 0.9rem; line-height: 1.6;">
-                                    <div>变更前：${change.before}</div>
-                                    <div>变更后：${change.after}</div>
-                                </div>
-                            ` : ''}
-                            ${change.content ? `<div style="margin-top: 8px;">${change.content}</div>` : ''}
-                            ${change.remark ? `<div style="margin-top: 4px; font-size: 0.85rem; color: var(--text-secondary);">${change.remark}</div>` : ''}
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
-
-    renderCompanyFunding(company) {
-        if (!company.funding || company.funding.length === 0) {
-            return '<div style="text-align: center; padding: 40px; color: var(--text-secondary);">暂无融资记录</div>';
-        }
-
-        return `
-            <div class="timeline">
-                ${company.funding.map(fund => `
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px;">${fund.date}</div>
-                            <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">${fund.round}</div>
-                            <div style="font-size: 0.9rem; line-height: 1.8;">
-                                <div>融资金额：<strong style="color: #e74c3c;">${fund.amount}</strong></div>
-                                ${fund.valuation ? `<div>公司估值：${fund.valuation}</div>` : ''}
-                                ${fund.investors && fund.investors.length > 0 ? `
-                                    <div>投资方：${fund.investors.join('、')}</div>
-                                ` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
-
-    renderCompanyShareholders(company) {
-        if (!company.shareholders || company.shareholders.length === 0) {
-            return '<div style="text-align: center; padding: 40px; color: var(--text-secondary);">暂无股东信息</div>';
-        }
-
-        return `
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-                ${company.shareholders.map(sh => `
-                    <div style="padding: 16px; background: var(--bg-light); border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-                        <div>
-                            <div style="font-weight: 600;">${sh.name}</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">${sh.type}</div>
-                        </div>
-                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">
-                            ${sh.ratio}
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
-
-    attachCompanyDetailsTabs() {
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const tabName = e.target.dataset.tab;
-
-                // 切换tab激活状态
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-
-                // 切换内容显示
-                document.querySelectorAll('.tab-content').forEach(content => {
-                    if (content.dataset.tabContent === tabName) {
-                        content.classList.add('active');
-                    } else {
-                        content.classList.remove('active');
-                    }
-                });
-            });
-        });
-    }
-
-    closeCompanyModal() {
-        document.getElementById('companyModal').style.display = 'none';
-    }
-
-    // 网络情报页面
     updateTime() {
         // 获取数据中最新的日期
         let latestDate = '2026-09-07';
-
+        
         if (MOCK_DATA.tocIntelligence && MOCK_DATA.tocIntelligence.length > 0) {
             latestDate = MOCK_DATA.tocIntelligence[0].date;
         }
-
+        
         // 转换为 YYYY-MM-DD HH:MM 格式
         const dateObj = new Date(latestDate + 'T09:00:00');
-        const timeStr = `${dateObj.getFullYear()}-${String(dateObj.getMonth()+1).padStart(2,'0')}-${String(dateObj.getDate()).padStart(2,'0')} ${String(dateObj.getHours()).padStart(2,'0')}:${String(dateObj.getMinutes()).padStart(2,'0')}`;
+        const timeStr = `${dateObj.getFullYear()}-${String(dateObj.getMonth()+1).padStart(2,'0')}-${String(dateObj.getDate()).padStart(2,'0')} ${String(dateObj.getHours()).padStart(2,'0'):${String(dateObj.getMinutes()).padStart(2,'0')}}`;
         document.getElementById('lastUpdate').textContent = timeStr;
     }
 }

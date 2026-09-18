@@ -1,0 +1,22 @@
+# Python 依赖包
+# 安装方法: pip3 install -r requirements.txt
+
+# 核心依赖
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# 可选依赖（根据需要安装）
+
+# Google Play 数据爬取
+# google-play-scraper>=1.2.0
+
+# 浏览器自动化（处理 JavaScript 渲染的网站）
+# selenium>=4.15.0
+# webdriver-manager>=4.0.0
+
+# 数据处理
+# pandas>=2.1.0
+
+# 代理支持
+# requests[socks]>=2.31.0

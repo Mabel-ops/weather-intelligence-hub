@@ -1,0 +1,95 @@
+[
+  {
+    "app_name": "彩云天气",
+    "app_info": {
+      "name": "彩云天气-为您预报几点几分下雨",
+      "bundle_id": "net.colorfulclouds.app",
+      "version": "7.63.1",
+      "release_date": "2026-09-11T02:32:32Z",
+      "release_notes": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
+      "rating": 3.78542,
+      "rating_count": 30819,
+      "price": 0.0,
+      "developer": "Beijing ColorfulClouds Technology Co., Ltd.",
+      "description": "彩云天气是基于气象雷达图，利用人工智能算法进行分钟级降水预报的全球先驱者。\n“分钟级降水预报”\n两小时内超准的分钟级降水预报，及时调整自己和家人的出行计划。\n“全方位天气提醒”\n无论是你的当前位置，还是收藏的地址，降水时间、预警信息、天气早晚报都支持自定义订阅！\n“全球气象雷达动图”\n700部气象雷达构建的AI预报网络，让你随时随地都能看到实时的降水动态。\n“全国空气质量动图”\n凉风起天末，雾霾意如何？等风来的闲暇时光，不如看看雾霾的走势。\n“台风实时追踪”\n每个台风都有一个美丽的名字，年年来此，却上演著不同的故事：强度、路径、生命史……\n“街道级定位”\n都说气象万千，那每条街道、小区也值得专属的天气预报！\n“我要反馈天气”\n预报错了就来吐槽！狠狠戳下反馈天气，帮助改进人工智能预报模型，一起来提高预报准确率！\n\n\n【自动续费会员说明】\n1. 服务名称：svip 连续包月, svip 连续包年。\n2. 价格： 9 元 / 月, 90 元 / 年。\n3. 购买自动续费的账号，会在每个月到期前24小时，自动在iTunes账户扣费并延长1个月会员有效期。\n4. 如需取消订阅，请手动打开苹果手机\"设置\" --> 进入\"iTunes Store 与 App Store\"-->点击 \"Apple ID\"，选择\"查看Apple ID\"，进入\"账户设置\"页面，点击\"订阅\"，选择\"彩云天气连续订阅\"取消订阅即可。如未在订阅期结束的至少24小时前关闭订阅，此订阅将会自动续订。\n5. 隐私协议: https://caiyunapp.com/h5/agreement/privacy.html\n6. 用户协议: https://caiyunapp.com/h5/agreement/vipprotocal.html",
+      "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/73/e5/3f/73e53f5a-f806-7ba8-872c-110ee148d844/AppIcon-free-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+      "app_store_url": "https://apps.apple.com/cn/app/%E5%BD%A9%E4%BA%91%E5%A4%A9%E6%B0%94-%E4%B8%BA%E6%82%A8%E9%A2%84%E6%8A%A5%E5%87%A0%E7%82%B9%E5%87%A0%E5%88%86%E4%B8%8B%E9%9B%A8/id847764912?uo=4",
+      "genres": [
+        "天气",
+        "工具"
+      ],
+      "file_size": "311305216",
+      "content_rating": "4+"
+    },
+    "reviews": [],
+    "review_analysis": {
+      "total": 0,
+      "average_rating": 0,
+      "rating_distribution": {},
+      "sentiment": "无数据"
+    },
+    "crawled_at": "2026-09-18 12:03:28"
+  },
+  {
+    "app_name": "The Weather Channel",
+    "app_info": {
+      "name": "The Weather Channel - Radar",
+      "bundle_id": "com.weather.TWC",
+      "version": "16.24",
+      "release_date": "2026-09-16T14:02:24Z",
+      "release_notes": "We're always working to make The Weather Channel app the best experience for our users. This update includes new perks, a few handy improvements, and bug fixes. A fresh front of improvements is moving in.\n\nQuestions? Contact us at iphonesupport@weather.com",
+      "rating": 4.76236,
+      "rating_count": 6024221,
+      "price": 0.0,
+      "developer": "The Weather Channel",
+      "description": "The Weather Channel is the World's Most Accurate Forecaster*. In addition to our daily forecasts, hourly details, and 24-Hour Future Radar, you can also personalize your weather preferences from skin health to air quality index forecast and more.\n\nOur live Doppler radar maps, storm watch, and storm tracker can warn you ahead of time of severe storms, heavy rain, or heat waves. Monitor our air quality index to stay updated during this allergy season. Severe weather is increasing across the nation - our severe weather alerts have you covered. \n\nToday’s Weather Forecast:\nPlan up to 15 days in advance with forecasts from the World’s Most Accurate Weather Forecaster, so you can plan ahead with confidence*. Manage personal weather alerts, so you receive notifications that are important to you.\n\nDownload The Weather Channel to get you through storm season & extreme weather warnings. \n\nThe Weather Channel Features:\n- New personalized weather tracking for wherever you are including, uv index, pollen count, humidity & more\n- 15-minute forecast for rain intensity up to 7 hours in the future & radar on your homescreen\n- Check weather forecasts up to two weeks in advance!\n- Prepare for severe storms \n- Air Quality Index forecast\n\nWidget & Homescreen Features:\n- Our smart widget offers more weather in detail at a glance and one-tap access to the forecast\n- Check your local radar, get severe weather alerts in your area, and check the forecast for the next three hours on your homescreen\n\nAdditional Features:\n- Detailed information on sunset times and allergy & flu forecasts\n- Keep informed with the latest weather news\n- Stay prepared during extreme weather events with live breaking news alerts \n---\nUpgrade to The Weather Channel Premium for our most comprehensive, dynamic, and precise weather experience available. Exclusive access to:\n- Ad-free weather\n- 15-minute forecast details\n- Advanced 72-Hour Future Radar\n- Air Travel weather updates\n- Probabilistic snowfall \n- and more!\n\nYou can cancel The Weather Channel subscription anytime through your App Store account settings, or it will automatically renew. This must be done 24 hours before the end of any subscription period to avoid being charged another fee. Subscription payments will be charged to your App Store account at confirmation of your purchase and upon commencement of each renewal term. For more information, please see our Privacy Policy and Terms of Use.\n\nPrivacy & Feedback\n•Our Privacy Policy can be viewed here: https://weather.com/en-US/twc/privacy-policy\n•Our Terms of Use can be viewed here: http://www.weather.com/common/home/legal.html\n•If you have any questions or suggestions about our weather service, please do not hesitate to get in touch at iphonesupport@weather.com\n\n*The Weather Channel is the World's Most Accurate Forecaster. According ForecastWatch, Global and Regional Weather Forecast Accuracy Overview, 2021-2024, https://forecastwatch.com/AccuracyOverview2021-2024, commissioned by The Weather Company.\n\n**The Weather Channel is the Most Trusted News Source In America. According to a YouGov 2024 Trust in Media poll: https://today.yougov.com/politics/articles/49552-trust-in-media-2024-which-news-outlets-americans-trust\n\nThe Weather Channel® is a registered trademark of The Weather Company, LLC 2024.",
+      "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b4/5f/89/b45f89ff-fcd3-245c-792a-6c28d292c504/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-0-85-220.png/512x512bb.jpg",
+      "app_store_url": "https://apps.apple.com/us/app/the-weather-channel-radar/id295646461?uo=4",
+      "genres": [
+        "Weather",
+        "Lifestyle"
+      ],
+      "file_size": "370750464",
+      "content_rating": "9+"
+    },
+    "reviews": [],
+    "review_analysis": {
+      "total": 0,
+      "average_rating": 0,
+      "rating_distribution": {},
+      "sentiment": "无数据"
+    },
+    "crawled_at": "2026-09-18 12:03:33"
+  },
+  {
+    "app_name": "Weather Underground",
+    "app_info": {
+      "name": "Weather Underground: Local Map",
+      "bundle_id": "com.wunderground.weatherunderground",
+      "version": "6.21",
+      "release_date": "2025-06-30T14:05:43Z",
+      "release_notes": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+      "rating": 3.91311,
+      "rating_count": 31683,
+      "price": 0.0,
+      "developer": "Weather Underground, LLC",
+      "description": "Discover a reliable, real-time and hyper-local forecast that will always warn you about upcoming severe weather. Weather Underground combines data from over 250,000+ personal weather stations and a proprietary forecast model to give you the most accurate and hyperlocal forecasts, at a microclimate level. Discover about current conditions, interactive Nexrad radar, get customizable severe weather alerts and much more. You’ll always be prepared for whatever the weather brings.\n\n\n5 REASONS TO DOWNLOAD WEATHER UNDERGROUND\n\n• Severe weather alerts: set weather alerts for your exact position, so you can always be prepared for an upcoming storm!\n• Local conditions: get current weather conditions from local weather stations and hourly/daily summary forecasts up to 10 days in the future, which include chance of precipitation and daily weather summaries.\n• Most detailed weather data: stay updated with the best weather data including temperature, “Feels Like,” wind speed, wind directions, today’s rain accumulation, humidity, dew point, visibility, and pressure.\n• Other geographical data: discover our air quality index, UV index, local flu outbreaks, sunrise & sunset and moonrise & moonset.\n• Customized experience: set your app with light & dark modes, various map types and units.\n\n\nDISCOVER THE UNIQUE FEATURES OF WEATHER UNDERGROUND\n• Interactive radar maps & severe weather:\n• The most interactive weather map on mobile allows you to select from different weather overlays, personal weather stations, nexrad radar, satellite, heat maps, and rain accumulation.\n• Sophisticated weather visualizations with hi-res satellite & cloud cover imagery from GOES-16, powered by data from NOAA.\n• Keep an eye out for extreme weather and always be prepared with severe weather alerts.\n\n\nAccurate hyper-local forecasts:\n• Over 250,000 personal weather stations report the most accurate local weather conditions.\n• Made to fill in the gaps between the airport weather stations that other weather services rely upon to generate forecasts - meaning our data is generated from actual data points in your neighborhood.\n\n\nSubscribe to Premium!\n• Upgrade and remove all ads from your weather app by purchasing an annual subscription.\n• Access Smart Forecasts: set your ideal weather conditions for your outdoor activities and we’ll tell you when to go.\n• View Extended Hourly Forecasts up to 15 days in the future.\n\n\nYou can cancel your Weather Underground subscription anytime through your iTunes account settings, or it will automatically renew. This must be done 24 hours before the end of any subscription period to avoid being charged another fee. Subscription payments will be charged to your iTunes account at confirmation of your purchase and upon commencement of each renewal term. For more information, please see our Privacy Policy and Terms of Use.\n\n\n-----\n\n\nPrivacy & Feedback\n\n• Our Privacy Policy can be viewed here: https://www.wunderground.com/company/privacy-policy\n• Our Terms of Use can be viewed here: https://www.wunderground.com/company/legal \n• If you have any questions or suggestions about our weather service, please do not hesitate to get in touch at support@wunderground.com.",
+      "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7a/0a/a0/7a0aa0ac-7473-b0d3-a0a5-245efb2727ad/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "app_store_url": "https://apps.apple.com/us/app/weather-underground-local-map/id486154808?uo=4",
+      "genres": [
+        "Weather",
+        "Travel"
+      ],
+      "file_size": "94568448",
+      "content_rating": "4+"
+    },
+    "reviews": [],
+    "review_analysis": {
+      "total": 0,
+      "average_rating": 0,
+      "rating_distribution": {},
+      "sentiment": "无数据"
+    },
+    "crawled_at": "2026-09-18 12:03:36"
+  }
+]
