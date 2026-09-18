@@ -1,5 +1,5 @@
 // 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-09-18 12:04:37
+// 最后更新: 2026-09-18 07:53:36
 // 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
@@ -237,6 +237,75 @@ const MOCK_DATA = {
         }
     ],
     "tocAppUpdates": [
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.58,
+                "rating_distribution": {
+                    "5星": 11,
+                    "4星": 6,
+                    "3星": 5,
+                    "2星": 7,
+                    "1星": 21
+                },
+                "sentiment": "负面"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
+            "version": "16.24",
+            "date": "2026-09-16",
+            "rating": "S",
+            "updateContent": "We're always working to make The Weather Channel app the best experience for our users. This update includes new perks, a few handy improvements, and bug fixes. A fresh front of improvements is moving in.\n\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.24 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 3.84,
+                "rating_distribution": {
+                    "5星": 30,
+                    "4星": 3,
+                    "3星": 6,
+                    "2星": 1,
+                    "1星": 10
+                },
+                "sentiment": "中性"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.63.1",
+            "date": "2026-09-11",
+            "rating": "B",
+            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
+            "highlights": "版本 7.63.1 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.12,
+                "rating_distribution": {
+                    "5星": 11,
+                    "4星": 0,
+                    "3星": 4,
+                    "2星": 4,
+                    "1星": 31
+                },
+                "sentiment": "负面"
+            }
+        },
         {
             "id": 20,
             "company": "Weather Underground",
@@ -513,39 +582,6 @@ const MOCK_DATA = {
             "highlights": "Weather & Radar持续强化其雷达可视化核心优势，闪电追踪数据来自全球闪电探测网络，延迟低于5秒。自定义图层功能允许专业用户叠加多种气象要素，满足深度分析需求。极端天气推送支持精细化阈值设置。",
             "insightForMoji": "雷达可视化是专业用户和极端天气场景的重要功能。墨迹需要评估在雷达地图上的投入力度，以及如何在大众化产品定位下提供专业功能，可考虑通过会员功能区分普通用户和专业用户需求。",
             "source": "App Store / Google Play"
-        },
-        {
-            "id": 6,
-            "company": "Weathernews",
-            "version": "v5.2.0",
-            "date": "2026-08-30",
-            "rating": "A",
-            "updateContent": "• 强化台风路径预测精度\n• 新增海洋天气专业服务\n• 优化降雪预报可视化\n• 支持Apple Watch独立运行",
-            "highlights": "Weathernews强化其在亚太地区的台风预测优势，结合日本气象厅数据和自有AI模型，台风路径预测准确率达行业领先水平。海洋天气服务针对渔业、航运等专业用户，显示其垂直化策略。Apple Watch独立应用提升便捷性。",
-            "insightForMoji": "日本竞品在台风等灾害性天气预报上积累深厚，其专业化路线值得借鉴。墨迹可考虑在台风、暴雨等中国用户高关注的灾害天气场景上做深度优化，建立差异化优势。可穿戴设备支持也是提升用户体验的方向。",
-            "source": "App Store（日本区）"
-        },
-        {
-            "id": 7,
-            "company": "天气通",
-            "version": "v8.05",
-            "date": "2026-08-28",
-            "rating": "B",
-            "updateContent": "• 优化首页布局和UI设计\n• 新增语音播报功能\n• 支持15天趋势预报\n• 修复部分机型闪退问题",
-            "highlights": "UI改版采用更简洁的卡片式设计，减少信息密度，降低认知负担。语音播报功能支持多种方言（粤语、四川话等），针对中老年用户优化。15天预报满足用户对长期天气的关注需求。",
-            "insightForMoji": "天气通在UI简化和适老化功能上有所探索。语音播报支持方言是针对特定用户群体的差异化功能。墨迹可关注不同年龄段用户的差异化需求，考虑推出简化版、长辈模式或无障碍优化。",
-            "source": "应用宝 / 华为应用市场"
-        },
-        {
-            "id": 8,
-            "company": "看天",
-            "version": "v3.2.1",
-            "date": "2026-08-25",
-            "rating": "B",
-            "updateContent": "• 新增农业天气指数\n• 支持农作物病虫害预警\n• 优化乡镇级天气预报\n• 新增农事建议功能",
-            "highlights": "看天专注农业气象服务，新增的农作物病虫害预警结合天气数据和农业知识，为农户提供实用建议。乡镇级预报精度提升，农事建议涵盖播种、施肥、收割等关键环节。垂直化定位清晰。",
-            "insightForMoji": "垂直场景的深耕是差异化竞争策略。看天在农业气象上的探索显示细分市场的潜力。墨迹可评估是否在某些垂直场景（如户外运动、旅游、钓鱼等）做专业化尝试，通过深度满足特定用户群体需求建立竞争壁垒。",
-            "source": "应用宝 / 小米应用商店"
         }
     ],
     "tocCompanyNews": [
