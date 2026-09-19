@@ -1,8 +1,10 @@
-// 气象行业情报监测平台 - 模拟数据
+// 气象行业情报监测平台 - 数据文件
+// 最后更新: 2026-09-19 01:13:02
+// 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 9,
+        "weeklyIntel": 7,
         "keyIntel": 13,
         "companies": 10,
         "trends": 8
@@ -263,6 +265,75 @@ const MOCK_DATA = {
         }
     ],
     "tocAppUpdates": [
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.58,
+                "rating_distribution": {
+                    "5星": 11,
+                    "4星": 6,
+                    "3星": 5,
+                    "2星": 7,
+                    "1星": 21
+                },
+                "sentiment": "负面"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
+            "version": "16.24.1",
+            "date": "2026-09-17",
+            "rating": "S",
+            "updateContent": "We're always working to make The Weather Channel app the best experience for our users. This update includes new perks, a few handy improvements, and bug fixes. A fresh front of improvements is moving in.\n\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.24.1 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 3.6,
+                "rating_distribution": {
+                    "5星": 25,
+                    "4星": 5,
+                    "3星": 7,
+                    "2星": 1,
+                    "1星": 12
+                },
+                "sentiment": "中性"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.63.1",
+            "date": "2026-09-11",
+            "rating": "B",
+            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
+            "highlights": "版本 7.63.1 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.1,
+                "rating_distribution": {
+                    "5星": 11,
+                    "4星": 0,
+                    "3星": 4,
+                    "2星": 3,
+                    "1星": 32
+                },
+                "sentiment": "负面"
+            }
+        },
         {
             "id": 23,
             "company": "Weather Underground",
@@ -574,39 +645,6 @@ const MOCK_DATA = {
             "updateContent": "• 集成ChatGPT对话式天气查询\n• 支持30+语言自然语言交互\n• 新增AI穿衣建议和出行规划\n• 优化雷达地图加载速度",
             "highlights": "首次将ChatGPT深度集成到天气查询流程中，用户可通过自然对话获取个性化天气建议。支持复杂场景问答，如'明天适合带孩子去公园吗？'系统会综合天气、温度、空气质量给出建议。多语言支持显示其全球化战略。",
             "insightForMoji": "生成式AI正在改变用户与天气信息的交互方式，从单向查询向双向对话演进。墨迹需要关注中文场景下的AI对话体验，探索更符合国内用户习惯的交互方式，如结合本地生活场景（外卖、出行、穿搭）提供建议。",
-            "source": "App Store / Google Play"
-        },
-        {
-            "id": 3,
-            "company": "Windy.com",
-            "version": "v39.2.0",
-            "date": "2026-09-03",
-            "rating": "A",
-            "updateContent": "• 上线全球实时空气质量3D可视化\n• 整合NASA、ESA卫星数据\n• 支持PM2.5、PM10、臭氧等多污染物展示\n• 新增污染物扩散动画",
-            "highlights": "Windy.com持续强化其可视化优势，3D空气质量地图可旋转查看不同高度的污染物分布。整合全球权威机构的卫星数据，提升了数据的专业性和权威性。污染物扩散动画帮助用户理解空气质量变化趋势。",
-            "insightForMoji": "可视化能力是差异化竞争点，但需要平衡专业性与易用性。Windy.com的专业工具定位适合气象爱好者，墨迹作为大众产品需要评估是否在空气质量展示上投入，以及如何简化呈现方式。",
-            "source": "App Store / Google Play"
-        },
-        {
-            "id": 4,
-            "company": "彩云天气",
-            "version": "v7.12.0",
-            "date": "2026-09-02",
-            "rating": "A",
-            "updateContent": "• 上线AI虚拟播报员\n• 支持自定义播报风格和内容\n• 优化分钟级降水预报算法\n• 新增天气变化提醒",
-            "highlights": "AI虚拟播报员基于数字人技术，可生成个性化的语音+视频天气播报。用户可选择播报员形象、声音风格和播报内容重点。功能已向会员开放，日均生成播报视频超10万条，用户接受度较高。",
-            "insightForMoji": "AI内容生成是创新方向，但需要关注用户真实需求和留存数据。彩云天气的数据显示用户对AI播报有一定接受度。墨迹可小范围测试类似功能，验证用户接受度和付费意愿后再决定是否大规模推广。",
-            "source": "App Store / 应用宝"
-        },
-        {
-            "id": 5,
-            "company": "Weather & Radar",
-            "version": "v2.48.5",
-            "date": "2026-09-01",
-            "rating": "A",
-            "updateContent": "• 新增全球闪电实时追踪\n• 升级多普勒雷达显示效果\n• 支持自定义雷达图层\n• 优化极端天气推送逻辑",
-            "highlights": "Weather & Radar持续强化其雷达可视化核心优势，闪电追踪数据来自全球闪电探测网络，延迟低于5秒。自定义图层功能允许专业用户叠加多种气象要素，满足深度分析需求。极端天气推送支持精细化阈值设置。",
-            "insightForMoji": "雷达可视化是专业用户和极端天气场景的重要功能。墨迹需要评估在雷达地图上的投入力度，以及如何在大众化产品定位下提供专业功能，可考虑通过会员功能区分普通用户和专业用户需求。",
             "source": "App Store / Google Play"
         }
     ],
