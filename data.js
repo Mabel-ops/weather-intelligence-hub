@@ -1,8 +1,10 @@
-// 气象行业情报监测平台 - 模拟数据
+// 气象行业情报监测平台 - 数据文件
+// 最后更新: 2026-09-20 01:13:39
+// 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 12,
+        "weeklyIntel": 7,
         "keyIntel": 14,
         "companies": 10,
         "trends": 8
@@ -305,6 +307,69 @@ const MOCK_DATA = {
         }
     ],
     "tocAppUpdates": [
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
+            "version": "16.24.1",
+            "date": "2026-09-17",
+            "rating": "S",
+            "updateContent": "We're always working to make The Weather Channel app the best experience for our users. This update includes new perks, a few handy improvements, and bug fixes. A fresh front of improvements is moving in.\n\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.24.1 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 3.36,
+                "rating_distribution": {
+                    "5星": 21,
+                    "4星": 5,
+                    "3星": 9,
+                    "2星": 1,
+                    "1星": 14
+                },
+                "sentiment": "中性"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.63.1",
+            "date": "2026-09-11",
+            "rating": "B",
+            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
+            "highlights": "版本 7.63.1 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.1,
+                "rating_distribution": {
+                    "5星": 11,
+                    "4星": 0,
+                    "3星": 4,
+                    "2星": 3,
+                    "1星": 32
+                },
+                "sentiment": "负面"
+            }
+        },
         {
             "id": 23,
             "company": "Weather Underground",
@@ -641,51 +706,6 @@ const MOCK_DATA = {
                 },
                 "sentiment": "正面"
             }
-        },
-        {
-            "id": 9,
-            "company": "彩云天气",
-            "version": "7.63.1",
-            "date": "2026-09-11",
-            "rating": "B",
-            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
-            "highlights": "版本 7.63.1 更新，用户评分 3.8/5.0",
-            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 1.96,
-                "rating_distribution": {
-                    "5星": 9,
-                    "4星": 0,
-                    "3星": 4,
-                    "2星": 4,
-                    "1星": 33
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 1,
-            "company": "AccuWeather",
-            "version": "v28.5.0",
-            "date": "2026-09-05",
-            "rating": "S",
-            "updateContent": "• 新增AI极端天气预警系统\n• 支持提前72小时预测极端天气\n• 优化分钟级降水预报准确率\n• 新增自然语言预警推送",
-            "highlights": "AI预警系统是本次更新的核心亮点，AccuWeather将深度学习模型应用于极端天气预测，准确率提升40%。系统可自动识别用户位置的极端天气风险并主动推送，预警提前量达72小时，在行业内形成明显领先优势。",
-            "insightForMoji": "AccuWeather将AI能力从辅助工具升级为核心预警功能，显示AI正在成为天气应用的核心竞争力。墨迹天气需要评估自身AI预警能力的差距，考虑加大AI气象预测研发投入，避免在核心功能上被竞品拉开差距。",
-            "source": "App Store / Google Play"
-        },
-        {
-            "id": 2,
-            "company": "The Weather Channel",
-            "version": "v52.8.1",
-            "date": "2026-09-04",
-            "rating": "A",
-            "updateContent": "• 集成ChatGPT对话式天气查询\n• 支持30+语言自然语言交互\n• 新增AI穿衣建议和出行规划\n• 优化雷达地图加载速度",
-            "highlights": "首次将ChatGPT深度集成到天气查询流程中，用户可通过自然对话获取个性化天气建议。支持复杂场景问答，如'明天适合带孩子去公园吗？'系统会综合天气、温度、空气质量给出建议。多语言支持显示其全球化战略。",
-            "insightForMoji": "生成式AI正在改变用户与天气信息的交互方式，从单向查询向双向对话演进。墨迹需要关注中文场景下的AI对话体验，探索更符合国内用户习惯的交互方式，如结合本地生活场景（外卖、出行、穿搭）提供建议。",
-            "source": "App Store / Google Play"
         }
     ],
     "tocCompanyNews": [
