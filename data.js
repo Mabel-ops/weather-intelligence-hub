@@ -1,8 +1,10 @@
-// 气象行业情报监测平台 - 模拟数据
+// 气象行业情报监测平台 - 数据文件
+// 最后更新: 2026-09-26 01:13:10
+// 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 18,
+        "weeklyIntel": 7,
         "keyIntel": 24,
         "companies": 10,
         "trends": 8
@@ -535,6 +537,75 @@ const MOCK_DATA = {
             "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
             "source": "App Store",
             "review_analysis": {
+                "total": 50,
+                "average_rating": 3.84,
+                "rating_distribution": {
+                    "5星": 30,
+                    "4星": 2,
+                    "3星": 4,
+                    "2星": 8,
+                    "1星": 6
+                },
+                "sentiment": "中性"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.63.1",
+            "date": "2026-09-11",
+            "rating": "B",
+            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
+            "highlights": "版本 7.63.1 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.0,
+                "rating_distribution": {
+                    "5星": 11,
+                    "4星": 0,
+                    "3星": 2,
+                    "2星": 2,
+                    "1星": 35
+                },
+                "sentiment": "负面"
+            }
+        },
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 50,
+                "average_rating": 2.62,
+                "rating_distribution": {
+                    "5星": 12,
+                    "4星": 6,
+                    "3星": 4,
+                    "2星": 7,
+                    "1星": 21
+                },
+                "sentiment": "负面"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
+            "version": "16.25",
+            "date": "2026-09-21",
+            "rating": "S",
+            "updateContent": "We're always working to make The Weather Channel app the best experience for our users. This update includes radar improvements, performance updates, and bug fixes. Partly cloudy with a 100% chance of a better app.\n\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.25 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
                 "total": 0,
                 "average_rating": 0,
                 "rating_distribution": {},
@@ -864,75 +935,6 @@ const MOCK_DATA = {
                     "3星": 9,
                     "2星": 1,
                     "1星": 14
-                },
-                "sentiment": "中性"
-            }
-        },
-        {
-            "id": 21,
-            "company": "彩云天气",
-            "version": "7.63.1",
-            "date": "2026-09-11",
-            "rating": "B",
-            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
-            "highlights": "版本 7.63.1 更新，用户评分 3.8/5.0",
-            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 2.1,
-                "rating_distribution": {
-                    "5星": 11,
-                    "4星": 0,
-                    "3星": 4,
-                    "2星": 3,
-                    "1星": 32
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 23,
-            "company": "Weather Underground",
-            "version": "6.21",
-            "date": "2025-06-30",
-            "rating": "B",
-            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
-            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
-            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 2.58,
-                "rating_distribution": {
-                    "5星": 11,
-                    "4星": 6,
-                    "3星": 5,
-                    "2星": 7,
-                    "1星": 21
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 22,
-            "company": "The Weather Channel",
-            "version": "16.24.1",
-            "date": "2026-09-17",
-            "rating": "S",
-            "updateContent": "We're always working to make The Weather Channel app the best experience for our users. This update includes new perks, a few handy improvements, and bug fixes. A fresh front of improvements is moving in.\n\nQuestions? Contact us at iphonesupport@weather.com",
-            "highlights": "版本 16.24.1 更新，用户评分 4.8/5.0",
-            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 3.6,
-                "rating_distribution": {
-                    "5星": 25,
-                    "4星": 5,
-                    "3星": 7,
-                    "2星": 1,
-                    "1星": 12
                 },
                 "sentiment": "中性"
             }
