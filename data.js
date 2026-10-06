@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-10-05 01:17:00
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
-        "keyIntel": 35,
+        "weeklyIntel": 15,
+        "keyIntel": 36,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weathernews等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。The Weather Channel等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1791248703766,
+            "title": "The Weather Channel强化AI预测能力",
+            "company": "The Weather Channel",
+            "field": "ToC",
+            "date": "2026-10-06",
+            "type": "AI",
+            "rating": "B",
+            "summary": "The Weather Channel宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://theweatherchannel.com/news",
+            "aiAnalysis": "The Weather Channel此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
+        {
+            "id": 1791248703767,
+            "title": "Windy.com获得新融资",
+            "company": "Windy.com",
+            "field": "ToC",
+            "date": "2026-10-06",
+            "type": "商业",
+            "rating": "A",
+            "summary": "Windy.com宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://windy.com.com/news",
+            "aiAnalysis": "Windy.com此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
         {
             "id": 1791162363062,
             "title": "Weathernews发布新版本",
@@ -94,20 +120,6 @@ const MOCK_DATA = {
             "aiAnalysis": "AccuWeather此举体现了在技术创新方面的持续投入",
             "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
             "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
-        },
-        {
-            "id": 1790989411244,
-            "title": "The Weather Channel强化AI预测能力",
-            "company": "The Weather Channel",
-            "field": "ToC",
-            "date": "2026-10-03",
-            "type": "AI",
-            "rating": "B",
-            "summary": "The Weather Channel宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://theweatherchannel.com/news",
-            "aiAnalysis": "The Weather Channel此举将进一步强化其市场竞争力",
-            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
-            "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
             "id": 1790903051811,
@@ -696,20 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "天气通在UI简化和适老化功能上有所探索。语音播报支持方言是针对中老年用户的差异化功能，显示对不同用户群体需求的关注。",
             "impactOnMoji": "对墨迹天气的影响：天气通在UI简化和适老化方面的尝试值得参考。墨迹可考虑针对不同年龄段用户推出差异化功能，如简化版或长辈模式。",
             "ratingReason": "国内竞品常规更新，适老化功能有特色"
-        },
-        {
-            "id": 9,
-            "title": "看天专注农业气象，新增农作物病虫害预警",
-            "company": "看天",
-            "field": "ToC",
-            "date": "2026-08-22",
-            "type": "产品",
-            "rating": "B",
-            "summary": "看天发布v3.2版本，专注农业气象服务。新增农作物病虫害预警功能，结合天气数据和农业知识为农户提供实用建议。优化了乡镇级天气预报精度，新增农事建议功能。",
-            "source": "https://kantian.app/news",
-            "aiAnalysis": "看天通过深耕农业气象垂直场景建立差异化定位。农作物病虫害预警等专业功能显示对细分用户需求的深度理解，垂直化策略值得关注。",
-            "impactOnMoji": "对墨迹天气的影响：垂直场景深耕是差异化竞争的有效策略。看天在农业气象上的探索显示细分市场潜力，墨迹可评估是否在某些垂直场景（如户外运动、旅游等）做专业化尝试。",
-            "ratingReason": "垂直化竞品产品更新，农业气象场景有价值"
         }
     ],
     "tocAppUpdates": [
