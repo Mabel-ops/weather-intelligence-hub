@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-10-07 01:17:51
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
-        "keyIntel": 36,
+        "weeklyIntel": 14,
+        "keyIntel": 35,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weather & Radar等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Windy.com等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1791421648164,
+            "title": "Windy.com升级预测模型",
+            "company": "Windy.com",
+            "field": "ToC",
+            "date": "2026-10-08",
+            "type": "技术",
+            "rating": "B",
+            "summary": "Windy.com宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://windy.com.com/news",
+            "aiAnalysis": "Windy.com此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
+        {
+            "id": 1791421648166,
+            "title": "Weather & Radar发布财报",
+            "company": "Weather & Radar",
+            "field": "ToC",
+            "date": "2026-10-08",
+            "type": "商业",
+            "rating": "B",
+            "summary": "Weather & Radar宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weather&radar.com/news",
+            "aiAnalysis": "Weather & Radar此举体现了在技术创新方面的持续投入",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
         {
             "id": 1791335238747,
             "title": "Weather & Radar拓展新市场",
@@ -404,20 +430,6 @@ const MOCK_DATA = {
             "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
-            "id": 1790211707003,
-            "title": "Windy.com升级预测模型",
-            "company": "Windy.com",
-            "field": "ToC",
-            "date": "2026-09-24",
-            "type": "技术",
-            "rating": "B",
-            "summary": "Windy.com宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://windy.com.com/news",
-            "aiAnalysis": "Windy.com此举将进一步强化其市场竞争力",
-            "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
-            "ratingReason": "常规功能更新，行业普遍趋势"
-        },
-        {
             "id": 1790211707004,
             "title": "Weather & Radar推出AI驱动的新功能",
             "company": "Weather & Radar",
@@ -696,20 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "闪电追踪是雷达地图的常规功能扩展，技术壁垒不高，但对关注极端天气的用户有一定价值。",
             "impactOnMoji": "对墨迹天气的影响：功能性补充，可根据用户需求评估是否引入。",
             "ratingReason": "常规功能更新，行业普遍趋势"
-        },
-        {
-            "id": 6,
-            "title": "Weathernews强化台风路径预测精度，新版本上线",
-            "company": "Weathernews",
-            "field": "ToC",
-            "date": "2026-08-30",
-            "type": "产品",
-            "rating": "A",
-            "summary": "日本气象服务商Weathernews发布最新版本，强化台风路径预测功能。结合日本气象厅数据和自有AI模型，台风路径预测准确率达行业领先水平。新版本还优化了海洋天气服务和降雪预报可视化。",
-            "source": "https://weathernews.jp/news",
-            "aiAnalysis": "Weathernews在亚太地区台风预测领域积累深厚，其专业化和本地化策略值得关注。针对台风等高关注天气场景的深度优化能够建立竞争壁垒。",
-            "impactOnMoji": "对墨迹天气的影响：台风预测是中国沿海地区用户的核心需求，Weathernews的技术优势显示专业化方向的价值。墨迹可考虑在台风、暴雨等灾害性天气预报上加大投入。",
-            "ratingReason": "日本头部竞品产品更新，台风预测技术领先"
         }
     ],
     "tocAppUpdates": [
