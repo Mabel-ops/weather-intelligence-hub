@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-10-10 06:49:49
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
-        "keyIntel": 33,
+        "weeklyIntel": 16,
+        "keyIntel": 34,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。The Weather Channel等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。AccuWeather等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1791700481243,
+            "title": "AccuWeather提升准确率",
+            "company": "AccuWeather",
+            "field": "ToC",
+            "date": "2026-10-11",
+            "type": "技术",
+            "rating": "S",
+            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://accuweather.com/news",
+            "aiAnalysis": "AccuWeather此举体现了在技术创新方面的持续投入",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
+        {
+            "id": 1791700481244,
+            "title": "Windy.com上线新特性",
+            "company": "Windy.com",
+            "field": "ToC",
+            "date": "2026-10-11",
+            "type": "产品",
+            "rating": "S",
+            "summary": "Windy.com宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://windy.com.com/news",
+            "aiAnalysis": "Windy.com此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
         {
             "id": 1791613752215,
             "title": "The Weather Channel集成大语言模型",
@@ -682,34 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "Windy.com持续强化其可视化优势，3D空气质量展示提升了数据呈现的专业性和直观性，符合其专业气象工具的产品定位。",
             "impactOnMoji": "对墨迹天气的影响：可视化能力是差异化竞争点，墨迹需要评估是否在空气质量展示上投入，以及如何平衡专业性与易用性。",
             "ratingReason": "重要产品功能，强化竞品差异化优势"
-        },
-        {
-            "id": 4,
-            "title": "彩云天气推出「AI气象播报员」功能",
-            "company": "彩云天气",
-            "field": "ToC",
-            "date": "2026-09-02",
-            "type": "AI",
-            "rating": "A",
-            "summary": "彩云天气上线AI虚拟播报员，基于数字人技术生成语音+视频天气播报，支持自定义播报内容和风格。功能已向会员用户开放，日均生成播报视频超10万条。",
-            "source": "https://caiyunapp.com/news",
-            "aiAnalysis": "彩云天气将AI应用于内容生成场景，通过数字人提升内容表现形式。虽然技术成熟度尚待验证，但探索了AI在气象内容生产上的新方向。",
-            "impactOnMoji": "对墨迹天气的影响：AI内容生成是潜在的差异化方向，墨迹可关注用户对此类功能的接受度，评估是否跟进。",
-            "ratingReason": "国内竞品AI功能创新，具有一定参考价值"
-        },
-        {
-            "id": 5,
-            "title": "Weather & Radar新增闪电追踪实时地图",
-            "company": "Weather & Radar",
-            "field": "ToC",
-            "date": "2026-09-01",
-            "type": "产品",
-            "rating": "B",
-            "summary": "Weather & Radar在雷达地图中新增全球闪电实时追踪功能，数据来自全球闪电探测网络，延迟低于5秒。用户可查看闪电密度、频率和移动方向。",
-            "source": "https://weatherradar.com/news",
-            "aiAnalysis": "闪电追踪是雷达地图的常规功能扩展，技术壁垒不高，但对关注极端天气的用户有一定价值。",
-            "impactOnMoji": "对墨迹天气的影响：功能性补充，可根据用户需求评估是否引入。",
-            "ratingReason": "常规功能更新，行业普遍趋势"
         }
     ],
     "tocAppUpdates": [
