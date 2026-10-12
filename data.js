@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-10-11 07:00:21
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
+        "weeklyIntel": 15,
         "keyIntel": 34,
         "companies": 10,
         "trends": 8
     },
     "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。AccuWeather等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1791787192737,
+            "title": "AccuWeather优化用户体验",
+            "company": "AccuWeather",
+            "field": "ToC",
+            "date": "2026-10-12",
+            "type": "产品",
+            "rating": "B",
+            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://accuweather.com/news",
+            "aiAnalysis": "AccuWeather此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
+        {
+            "id": 1791787192738,
+            "title": "AccuWeather获得新融资",
+            "company": "AccuWeather",
+            "field": "ToC",
+            "date": "2026-10-12",
+            "type": "商业",
+            "rating": "A",
+            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://accuweather.com/news",
+            "aiAnalysis": "AccuWeather此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
         {
             "id": 1791700481243,
             "title": "AccuWeather提升准确率",
@@ -376,20 +402,6 @@ const MOCK_DATA = {
             "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
-            "id": 1790643846903,
-            "title": "AccuWeather优化用户体验",
-            "company": "AccuWeather",
-            "field": "ToC",
-            "date": "2026-09-29",
-            "type": "产品",
-            "rating": "B",
-            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://accuweather.com/news",
-            "aiAnalysis": "AccuWeather此举将进一步强化其市场竞争力",
-            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
-            "ratingReason": "常规功能更新，行业普遍趋势"
-        },
-        {
             "id": 1790557366869,
             "title": "Windy.com优化算法",
             "company": "Windy.com",
@@ -696,20 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "生成式AI正在成为天气APP的标配功能，从单向信息展示向双向对话交互演进。The Weather Channel此举进一步强化了其在AI应用方面的领先地位。",
             "impactOnMoji": "对墨迹天气的影响：竞品通过对话式交互提升用户体验，墨迹需要评估是否引入类似能力，以及如何在中文场景下提供更优质的对话体验。",
             "ratingReason": "重要AI功能上线，提升用户交互体验，具有较强参考价值"
-        },
-        {
-            "id": 3,
-            "title": "Windy.com上线全球实时空气质量3D可视化",
-            "company": "Windy.com",
-            "field": "ToC",
-            "date": "2026-09-03",
-            "type": "产品",
-            "rating": "A",
-            "summary": "Windy.com推出全球空气质量3D可视化功能，整合NASA、ESA等机构的卫星数据，提供PM2.5、PM10、臭氧等污染物的实时3D地图展示。用户可旋转查看不同高度的空气质量分布。",
-            "source": "https://windy.com/news",
-            "aiAnalysis": "Windy.com持续强化其可视化优势，3D空气质量展示提升了数据呈现的专业性和直观性，符合其专业气象工具的产品定位。",
-            "impactOnMoji": "对墨迹天气的影响：可视化能力是差异化竞争点，墨迹需要评估是否在空气质量展示上投入，以及如何平衡专业性与易用性。",
-            "ratingReason": "重要产品功能，强化竞品差异化优势"
         }
     ],
     "tocAppUpdates": [
