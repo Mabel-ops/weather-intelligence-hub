@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-10-12 07:06:22
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
+        "weeklyIntel": 15,
         "keyIntel": 34,
         "companies": 10,
         "trends": 8
     },
     "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。AccuWeather等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1791875430547,
+            "title": "AccuWeather强化AI预测能力",
+            "company": "AccuWeather",
+            "field": "ToC",
+            "date": "2026-10-13",
+            "type": "AI",
+            "rating": "A",
+            "summary": "AccuWeather宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://accuweather.com/news",
+            "aiAnalysis": "AccuWeather此举体现了在技术创新方面的持续投入",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
+        {
+            "id": 1791875430548,
+            "title": "彩云天气升级预测模型",
+            "company": "彩云天气",
+            "field": "ToC",
+            "date": "2026-10-13",
+            "type": "技术",
+            "rating": "S",
+            "summary": "彩云天气宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://彩云天气.com/news",
+            "aiAnalysis": "彩云天气此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
         {
             "id": 1791787192737,
             "title": "AccuWeather优化用户体验",
@@ -682,34 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "Weathernews此举有助于提升用户粘性和市场份额",
             "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
             "ratingReason": "重要功能更新，具有较强参考价值"
-        },
-        {
-            "id": 1,
-            "title": "AccuWeather推出AI驱动的极端天气预警系统",
-            "company": "AccuWeather",
-            "field": "ToC",
-            "date": "2026-09-05",
-            "type": "AI",
-            "rating": "S",
-            "summary": "AccuWeather宣布推出新一代AI极端天气预警系统，基于深度学习模型分析气象数据，可提前72小时预测极端天气事件，准确率提升40%。系统已在美国、欧洲市场上线，支持自然语言预警推送。",
-            "source": "https://www.accuweather.com/news",
-            "aiAnalysis": "这是AccuWeather在AI气象预测领域的重大突破，将AI能力从辅助分析提升到核心预警链路。72小时提前量和40%准确率提升具有明显竞争优势。",
-            "impactOnMoji": "对墨迹天气的影响：竞品在AI预警能力上形成领先优势，墨迹需要评估自身AI预警能力的差距，考虑是否加大AI气象预测投入。",
-            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
-        },
-        {
-            "id": 2,
-            "title": "The Weather Channel集成ChatGPT提供对话式天气查询",
-            "company": "The Weather Channel",
-            "field": "ToC",
-            "date": "2026-09-04",
-            "type": "AI",
-            "rating": "A",
-            "summary": "The Weather Channel在iOS和Android应用中集成OpenAI ChatGPT，用户可通过自然语言对话获取天气信息、出行建议和穿衣指南。功能支持30+语言，已在全球市场上线。",
-            "source": "https://weather.com/news",
-            "aiAnalysis": "生成式AI正在成为天气APP的标配功能，从单向信息展示向双向对话交互演进。The Weather Channel此举进一步强化了其在AI应用方面的领先地位。",
-            "impactOnMoji": "对墨迹天气的影响：竞品通过对话式交互提升用户体验，墨迹需要评估是否引入类似能力，以及如何在中文场景下提供更优质的对话体验。",
-            "ratingReason": "重要AI功能上线，提升用户交互体验，具有较强参考价值"
         }
     ],
     "tocAppUpdates": [
