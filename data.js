@@ -1,8 +1,10 @@
-// 气象行业情报监测平台 - 模拟数据
+// 气象行业情报监测平台 - 数据文件
+// 最后更新: 2026-10-22 05:52:57
+// 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 16,
+        "weeklyIntel": 7,
         "keyIntel": 32,
         "companies": 10,
         "trends": 8
@@ -731,6 +733,57 @@ const MOCK_DATA = {
         {
             "id": 22,
             "company": "The Weather Channel",
+            "version": "16.29.1",
+            "date": "2026-10-21",
+            "rating": "S",
+            "updateContent": "Get ready for Halloween! Save the new Trick or Treat routine in one tap. Also includes Radar and Routines fixes.\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.29.1 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.63.3",
+            "date": "2026-10-20",
+            "rating": "B",
+            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
+            "highlights": "版本 7.63.3 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
             "version": "16.29",
             "date": "2026-10-20",
             "rating": "S",
@@ -1034,69 +1087,6 @@ const MOCK_DATA = {
                     "1星": 8
                 },
                 "sentiment": "中性"
-            }
-        },
-        {
-            "id": 21,
-            "company": "彩云天气",
-            "version": "7.63.2",
-            "date": "2026-10-09",
-            "rating": "B",
-            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
-            "highlights": "版本 7.63.2 更新，用户评分 3.8/5.0",
-            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 2.54,
-                "rating_distribution": {
-                    "5星": 17,
-                    "4星": 2,
-                    "3星": 1,
-                    "2星": 1,
-                    "1星": 29
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 23,
-            "company": "Weather Underground",
-            "version": "6.21",
-            "date": "2025-06-30",
-            "rating": "B",
-            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
-            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
-            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 2.68,
-                "rating_distribution": {
-                    "5星": 14,
-                    "4星": 5,
-                    "3星": 5,
-                    "2星": 3,
-                    "1星": 23
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 22,
-            "company": "The Weather Channel",
-            "version": "16.28",
-            "date": "2026-10-12",
-            "rating": "S",
-            "updateContent": "We're always working to make The Weather Channel app the best experience for our users. This update includes performance improvements and bug fixes. A fresh front of improvements is moving in. \n\nQuestions? Contact us at iphonesupport@weather.com",
-            "highlights": "版本 16.28 更新，用户评分 4.8/5.0",
-            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 0,
-                "average_rating": 0,
-                "rating_distribution": {},
-                "sentiment": "无数据"
             }
         }
     ],
