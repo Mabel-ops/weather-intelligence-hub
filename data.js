@@ -1,8 +1,10 @@
-// 气象行业情报监测平台 - 模拟数据
+// 气象行业情报监测平台 - 数据文件
+// 最后更新: 2026-10-31 06:48:36
+// 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 15,
+        "weeklyIntel": 7,
         "keyIntel": 31,
         "companies": 10,
         "trends": 8
@@ -773,6 +775,57 @@ const MOCK_DATA = {
             "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
             "source": "App Store",
             "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
+            "version": "16.30.2",
+            "date": "2026-10-29",
+            "rating": "S",
+            "updateContent": "Meet the new look -- Liquid Glass is here! We're also getting ready for iPhone Duo's release with new layouts that adapt to folding, unfolding, and rotating, plus improved iPad support for multiple windows and split views.\n\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.30.2 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.63.5",
+            "date": "2026-10-30",
+            "rating": "B",
+            "updateContent": "1. 新增 iPhone Duo 适配，使用更流畅\n2. 修复了一些已知问题",
+            "highlights": "版本 7.63.5 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
                 "total": 50,
                 "average_rating": 2.68,
                 "rating_distribution": {
@@ -1022,69 +1075,6 @@ const MOCK_DATA = {
                 "average_rating": 0,
                 "rating_distribution": {},
                 "sentiment": "无数据"
-            }
-        },
-        {
-            "id": 21,
-            "company": "彩云天气",
-            "version": "7.63.3",
-            "date": "2026-10-20",
-            "rating": "B",
-            "updateContent": "1. 优化地址展示规则，提升显示准确率\n2. 优化台风相关功能细节\n3. 新增 Apple Watch 国际化支持\n4. 修复了一些已知问题",
-            "highlights": "版本 7.63.3 更新，用户评分 3.8/5.0",
-            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 0,
-                "average_rating": 0,
-                "rating_distribution": {},
-                "sentiment": "无数据"
-            }
-        },
-        {
-            "id": 23,
-            "company": "Weather Underground",
-            "version": "6.21",
-            "date": "2025-06-30",
-            "rating": "B",
-            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
-            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
-            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 2.64,
-                "rating_distribution": {
-                    "5星": 14,
-                    "4星": 4,
-                    "3星": 6,
-                    "2星": 2,
-                    "1星": 24
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 22,
-            "company": "The Weather Channel",
-            "version": "16.30",
-            "date": "2026-10-23",
-            "rating": "S",
-            "updateContent": "Meet the new look -- Liquid Glass is here! We're also getting ready for iPhone Duo's release with new layouts that adapt to folding, unfolding, and rotating, plus improved iPad support for multiple windows and split views.\n\nQuestions? Contact us at iphonesupport@weather.com",
-            "highlights": "版本 16.30 更新，用户评分 4.8/5.0",
-            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 4.2,
-                "rating_distribution": {
-                    "5星": 34,
-                    "4星": 4,
-                    "3星": 5,
-                    "2星": 2,
-                    "1星": 5
-                },
-                "sentiment": "正面"
             }
         }
     ],
