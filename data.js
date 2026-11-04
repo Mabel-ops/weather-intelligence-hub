@@ -1,16 +1,56 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-11-03 07:44:18
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
-        "keyIntel": 28,
+        "weeklyIntel": 15,
+        "keyIntel": 27,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。The Weather Channel等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。彩云天气等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1793775711860,
+            "title": "彩云天气优化用户体验",
+            "company": "彩云天气",
+            "field": "ToC",
+            "date": "2026-11-04",
+            "type": "产品",
+            "rating": "B",
+            "summary": "彩云天气宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://彩云天气.com/news",
+            "aiAnalysis": "彩云天气此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
+        {
+            "id": 1793775711862,
+            "title": "Weathernews获得新融资",
+            "company": "Weathernews",
+            "field": "ToC",
+            "date": "2026-11-04",
+            "type": "商业",
+            "rating": "A",
+            "summary": "Weathernews宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weathernews.com/news",
+            "aiAnalysis": "Weathernews此举反映了行业向智能化方向发展的趋势",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
+        {
+            "id": 1793775711863,
+            "title": "彩云天气获得新融资",
+            "company": "彩云天气",
+            "field": "ToC",
+            "date": "2026-11-04",
+            "type": "商业",
+            "rating": "B",
+            "summary": "彩云天气宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://彩云天气.com/news",
+            "aiAnalysis": "彩云天气此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
         {
             "id": 1793690388317,
             "title": "The Weather Channel上线智能分析系统",
@@ -586,20 +626,6 @@ const MOCK_DATA = {
             "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
-            "id": 1791508175842,
-            "title": "Weathernews获得新融资",
-            "company": "Weathernews",
-            "field": "ToC",
-            "date": "2026-10-09",
-            "type": "商业",
-            "rating": "A",
-            "summary": "Weathernews宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://weathernews.com/news",
-            "aiAnalysis": "Weathernews此举体现了在技术创新方面的持续投入",
-            "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
-            "ratingReason": "重要功能更新，具有较强参考价值"
-        },
-        {
             "id": 1791421648166,
             "title": "Weather & Radar发布财报",
             "company": "Weather & Radar",
@@ -682,34 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "Weathernews此举有助于提升用户粘性和市场份额",
             "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
             "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
-        },
-        {
-            "id": 1791162363065,
-            "title": "彩云天气发布新版本",
-            "company": "彩云天气",
-            "field": "ToC",
-            "date": "2026-10-05",
-            "type": "产品",
-            "rating": "S",
-            "summary": "彩云天气宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://彩云天气.com/news",
-            "aiAnalysis": "彩云天气此举体现了在技术创新方面的持续投入",
-            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
-            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
-        },
-        {
-            "id": 1791086243727,
-            "title": "彩云天气改进数据源",
-            "company": "彩云天气",
-            "field": "ToC",
-            "date": "2026-10-04",
-            "type": "技术",
-            "rating": "B",
-            "summary": "彩云天气宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://彩云天气.com/news",
-            "aiAnalysis": "彩云天气此举反映了行业向智能化方向发展的趋势",
-            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
-            "ratingReason": "常规功能更新，行业普遍趋势"
         }
     ],
     "tocAppUpdates": [
