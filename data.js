@@ -1,16 +1,56 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-11-08 07:01:47
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
+        "weeklyIntel": 18,
         "keyIntel": 30,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weather & Radar等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weathernews等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1794208707077,
+            "title": "Weathernews发布财报",
+            "company": "Weathernews",
+            "field": "ToC",
+            "date": "2026-11-09",
+            "type": "商业",
+            "rating": "B",
+            "summary": "Weathernews宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weathernews.com/news",
+            "aiAnalysis": "Weathernews此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
+        {
+            "id": 1794208707078,
+            "title": "Weathernews达成战略合作",
+            "company": "Weathernews",
+            "field": "ToC",
+            "date": "2026-11-09",
+            "type": "商业",
+            "rating": "A",
+            "summary": "Weathernews宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weathernews.com/news",
+            "aiAnalysis": "Weathernews此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
+        {
+            "id": 1794208707079,
+            "title": "The Weather Channel集成大语言模型",
+            "company": "The Weather Channel",
+            "field": "ToC",
+            "date": "2026-11-09",
+            "type": "AI",
+            "rating": "S",
+            "summary": "The Weather Channel宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://theweatherchannel.com/news",
+            "aiAnalysis": "The Weather Channel此举体现了在技术创新方面的持续投入",
+            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
         {
             "id": 1794120408405,
             "title": "Weather & Radar拓展新市场",
@@ -668,48 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "AccuWeather此举体现了在技术创新方面的持续投入",
             "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
             "ratingReason": "重要功能更新，具有较强参考价值"
-        },
-        {
-            "id": 1791787192737,
-            "title": "AccuWeather优化用户体验",
-            "company": "AccuWeather",
-            "field": "ToC",
-            "date": "2026-10-12",
-            "type": "产品",
-            "rating": "B",
-            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://accuweather.com/news",
-            "aiAnalysis": "AccuWeather此举将进一步强化其市场竞争力",
-            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
-            "ratingReason": "常规功能更新，行业普遍趋势"
-        },
-        {
-            "id": 1791787192738,
-            "title": "AccuWeather获得新融资",
-            "company": "AccuWeather",
-            "field": "ToC",
-            "date": "2026-10-12",
-            "type": "商业",
-            "rating": "A",
-            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://accuweather.com/news",
-            "aiAnalysis": "AccuWeather此举将进一步强化其市场竞争力",
-            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
-            "ratingReason": "重要功能更新，具有较强参考价值"
-        },
-        {
-            "id": 1791700481243,
-            "title": "AccuWeather提升准确率",
-            "company": "AccuWeather",
-            "field": "ToC",
-            "date": "2026-10-11",
-            "type": "技术",
-            "rating": "S",
-            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://accuweather.com/news",
-            "aiAnalysis": "AccuWeather此举体现了在技术创新方面的持续投入",
-            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
-            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
         }
     ],
     "tocAppUpdates": [
@@ -759,7 +757,7 @@ const MOCK_DATA = {
             "source": "App Store",
             "review_analysis": {
                 "total": 50,
-                "average_rating": 2.0,
+                "average_rating": 2,
                 "rating_distribution": {
                     "5星": 11,
                     "4星": 0,
