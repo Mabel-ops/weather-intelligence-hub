@@ -1,16 +1,28 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-11-09 07:46:52
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
-        "keyIntel": 30,
+        "weeklyIntel": 16,
+        "keyIntel": 31,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weathernews等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weather & Radar等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1794296990602,
+            "title": "Weather & Radar优化用户体验",
+            "company": "Weather & Radar",
+            "field": "ToC",
+            "date": "2026-11-10",
+            "type": "产品",
+            "rating": "S",
+            "summary": "Weather & Radar宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://weather&radar.com/news",
+            "aiAnalysis": "Weather & Radar此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
         {
             "id": 1794208707077,
             "title": "Weathernews发布财报",
@@ -584,20 +596,6 @@ const MOCK_DATA = {
             "aiAnalysis": "Weather & Radar此举体现了在技术创新方面的持续投入",
             "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
             "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
-        },
-        {
-            "id": 1792474067532,
-            "title": "Weather & Radar优化用户体验",
-            "company": "Weather & Radar",
-            "field": "ToC",
-            "date": "2026-10-20",
-            "type": "产品",
-            "rating": "B",
-            "summary": "Weather & Radar宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://weather&radar.com/news",
-            "aiAnalysis": "Weather & Radar此举有助于提升用户粘性和市场份额",
-            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
-            "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
             "id": 1792387529418,
