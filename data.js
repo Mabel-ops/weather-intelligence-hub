@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-11-15 07:41:15
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
+        "weeklyIntel": 15,
         "keyIntel": 32,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Windy.com等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。AccuWeather等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1794813846517,
+            "title": "AccuWeather优化算法",
+            "company": "AccuWeather",
+            "field": "ToC",
+            "date": "2026-11-16",
+            "type": "技术",
+            "rating": "S",
+            "summary": "AccuWeather宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://accuweather.com/news",
+            "aiAnalysis": "AccuWeather此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
+        {
+            "id": 1794813846518,
+            "title": "彩云天气集成大语言模型",
+            "company": "彩云天气",
+            "field": "ToC",
+            "date": "2026-11-16",
+            "type": "AI",
+            "rating": "A",
+            "summary": "彩云天气宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://彩云天气.com/news",
+            "aiAnalysis": "彩云天气此举将进一步强化其市场竞争力",
+            "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
+            "ratingReason": "重要功能更新，具有较强参考价值"
+        },
         {
             "id": 1794727061400,
             "title": "Windy.com集成大语言模型",
@@ -682,34 +708,6 @@ const MOCK_DATA = {
             "aiAnalysis": "The Weather Channel此举体现了在技术创新方面的持续投入",
             "impactOnMoji": "对墨迹天气的影响：建议密切关注用户反馈和市场反应",
             "ratingReason": "重要功能更新，具有较强参考价值"
-        },
-        {
-            "id": 1792560388815,
-            "title": "Weather & Radar强化AI预测能力",
-            "company": "Weather & Radar",
-            "field": "ToC",
-            "date": "2026-10-21",
-            "type": "AI",
-            "rating": "S",
-            "summary": "Weather & Radar宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://weather&radar.com/news",
-            "aiAnalysis": "Weather & Radar此举体现了在技术创新方面的持续投入",
-            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
-            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
-        },
-        {
-            "id": 1792387529418,
-            "title": "The Weather Channel推出创新功能",
-            "company": "The Weather Channel",
-            "field": "ToC",
-            "date": "2026-10-19",
-            "type": "产品",
-            "rating": "S",
-            "summary": "The Weather Channel宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://theweatherchannel.com/news",
-            "aiAnalysis": "The Weather Channel此举反映了行业向智能化方向发展的趋势",
-            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
-            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
         }
     ],
     "tocAppUpdates": [
