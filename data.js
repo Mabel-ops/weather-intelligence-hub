@@ -1,16 +1,42 @@
-// 气象行业情报监测平台 - 数据文件
-// 最后更新: 2026-11-22 07:52:55
-// 数据来源: Web Crawler + Manual Collection
+// 气象行业情报监测平台 - 模拟数据
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 7,
-        "keyIntel": 32,
+        "weeklyIntel": 14,
+        "keyIntel": 33,
         "companies": 10,
         "trends": 8
     },
-    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Weather & Radar等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
+    "aiWeeklySummary": "本周气象行业ToC领域，主要竞品在AI技术方面持续投入。Windy.com等厂商发布了多项更新，行业整体呈现智能化、精细化发展趋势。",
     "tocIntelligence": [
+        {
+            "id": 1795422087563,
+            "title": "Windy.com推出AI驱动的新功能",
+            "company": "Windy.com",
+            "field": "ToC",
+            "date": "2026-11-23",
+            "type": "AI",
+            "rating": "S",
+            "summary": "Windy.com宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://windy.com.com/news",
+            "aiAnalysis": "Windy.com此举有助于提升用户粘性和市场份额",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "重大产品功能发布，涉及核心竞争力，对行业竞争格局有明显影响"
+        },
+        {
+            "id": 1795422087564,
+            "title": "The Weather Channel推出创新功能",
+            "company": "The Weather Channel",
+            "field": "ToC",
+            "date": "2026-11-23",
+            "type": "产品",
+            "rating": "B",
+            "summary": "The Weather Channel宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
+            "source": "https://theweatherchannel.com/news",
+            "aiAnalysis": "The Weather Channel此举反映了行业向智能化方向发展的趋势",
+            "impactOnMoji": "对墨迹天气的影响：值得评估对自身产品策略的启示",
+            "ratingReason": "常规功能更新，行业普遍趋势"
+        },
         {
             "id": 1795332857523,
             "title": "Weather & Radar强化AI预测能力",
@@ -149,20 +175,6 @@ const MOCK_DATA = {
             "source": "https://theweatherchannel.com/news",
             "aiAnalysis": "The Weather Channel此举将进一步强化其市场竞争力",
             "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
-            "ratingReason": "常规功能更新，行业普遍趋势"
-        },
-        {
-            "id": 1794988799137,
-            "title": "The Weather Channel推出创新功能",
-            "company": "The Weather Channel",
-            "field": "ToC",
-            "date": "2026-11-18",
-            "type": "产品",
-            "rating": "B",
-            "summary": "The Weather Channel宣布发布最新产品更新，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://theweatherchannel.com/news",
-            "aiAnalysis": "The Weather Channel此举反映了行业向智能化方向发展的趋势",
-            "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
             "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
@@ -625,20 +637,6 @@ const MOCK_DATA = {
             "source": "https://windy.com.com/news",
             "aiAnalysis": "Windy.com此举反映了行业向智能化方向发展的趋势",
             "impactOnMoji": "对墨迹天气的影响：需要关注竞品的技术进展，评估是否跟进",
-            "ratingReason": "常规功能更新，行业普遍趋势"
-        },
-        {
-            "id": 1793427828052,
-            "title": "Windy.com推出AI驱动的新功能",
-            "company": "Windy.com",
-            "field": "ToC",
-            "date": "2026-10-31",
-            "type": "AI",
-            "rating": "B",
-            "summary": "Windy.com宣布推出基于AI的新功能，旨在提升用户体验和预测准确率。该功能已在主要市场上线，预期将对行业产生积极影响。",
-            "source": "https://windy.com.com/news",
-            "aiAnalysis": "Windy.com此举将进一步强化其市场竞争力",
-            "impactOnMoji": "对墨迹天气的影响：可以作为产品规划的参考，考虑类似功能",
             "ratingReason": "常规功能更新，行业普遍趋势"
         },
         {
