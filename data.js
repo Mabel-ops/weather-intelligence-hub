@@ -1,8 +1,10 @@
-// 气象行业情报监测平台 - 模拟数据
+// 气象行业情报监测平台 - 数据文件
+// 最后更新: 2026-11-27 09:31:57
+// 数据来源: Web Crawler + Manual Collection
 
 const MOCK_DATA = {
     "stats": {
-        "weeklyIntel": 15,
+        "weeklyIntel": 7,
         "keyIntel": 30,
         "companies": 10,
         "trends": 8
@@ -807,6 +809,57 @@ const MOCK_DATA = {
             "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
             "source": "App Store",
             "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 23,
+            "company": "Weather Underground",
+            "version": "6.21",
+            "date": "2025-06-30",
+            "rating": "B",
+            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
+            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
+            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 22,
+            "company": "The Weather Channel",
+            "version": "16.32.2",
+            "date": "2026-11-24",
+            "rating": "S",
+            "updateContent": "The forecast is looking clearer. Our 24-Hr and 72-Hr radar now has sharper, higher-resolution detail. Opening Radar from Today zooms to fit the storm path and your location. Plus smoother scrolling and bug fixes.\n\nQuestions? Contact us at iphonesupport@weather.com",
+            "highlights": "版本 16.32.2 更新，用户评分 4.8/5.0",
+            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
+                "total": 0,
+                "average_rating": 0,
+                "rating_distribution": {},
+                "sentiment": "无数据"
+            }
+        },
+        {
+            "id": 21,
+            "company": "彩云天气",
+            "version": "7.64.0",
+            "date": "2026-11-24",
+            "rating": "B",
+            "updateContent": "1. 全面适配 iPhone Duo：地图页天气与地图左右同屏展示，大屏浏览更高效\n2. 修复了一些已知问题",
+            "highlights": "版本 7.64.0 更新，用户评分 3.8/5.0",
+            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
+            "source": "App Store",
+            "review_analysis": {
                 "total": 50,
                 "average_rating": 2.58,
                 "rating_distribution": {
@@ -1026,69 +1079,6 @@ const MOCK_DATA = {
                     "3星": 3,
                     "2星": 1,
                     "1星": 5
-                },
-                "sentiment": "正面"
-            }
-        },
-        {
-            "id": 21,
-            "company": "彩云天气",
-            "version": "7.63.5",
-            "date": "2026-10-30",
-            "rating": "B",
-            "updateContent": "1. 新增 iPhone Duo 适配，使用更流畅\n2. 修复了一些已知问题",
-            "highlights": "版本 7.63.5 更新，用户评分 3.8/5.0",
-            "insightForMoji": "彩云天气的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 0,
-                "average_rating": 0,
-                "rating_distribution": {},
-                "sentiment": "无数据"
-            }
-        },
-        {
-            "id": 23,
-            "company": "Weather Underground",
-            "version": "6.21",
-            "date": "2025-06-30",
-            "rating": "B",
-            "updateContent": "Thanks for using Weather Underground! Please email us at support@wunderground.com with any suggestions or questions.",
-            "highlights": "版本 6.21 更新，用户评分 3.9/5.0",
-            "insightForMoji": "Weather Underground的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 2.74,
-                "rating_distribution": {
-                    "5星": 11,
-                    "4星": 7,
-                    "3星": 9,
-                    "2星": 4,
-                    "1星": 19
-                },
-                "sentiment": "负面"
-            }
-        },
-        {
-            "id": 22,
-            "company": "The Weather Channel",
-            "version": "16.32.1",
-            "date": "2026-11-19",
-            "rating": "S",
-            "updateContent": "The forecast is looking clearer. Our 24-Hr and 72-Hr radar now has sharper, higher-resolution detail. Opening Radar from Today zooms to fit the storm path and your location. Plus smoother scrolling and bug fixes.\n\nQuestions? Contact us at iphonesupport@weather.com",
-            "highlights": "版本 16.32.1 更新，用户评分 4.8/5.0",
-            "insightForMoji": "The Weather Channel的更新值得关注，建议分析其功能变化和用户反馈。",
-            "source": "App Store",
-            "review_analysis": {
-                "total": 50,
-                "average_rating": 4.46,
-                "rating_distribution": {
-                    "5星": 40,
-                    "4星": 2,
-                    "3星": 3,
-                    "2星": 1,
-                    "1星": 4
                 },
                 "sentiment": "正面"
             }
